@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <!-- DDMRP Buffer for Organic Cotton Fabric (Raw Material) -->
+    <record id="stock_buffer_cotton" model="stock.buffer">
+        <field name="product_id" ref="product_raw_cotton_fabric" />
+        <field
+            name="buffer_profile_id"
+            ref="ddmrp.stock_buffer_profile_replenish_purchased_medium_medium"
+        />
+        <field name="adu_calculation_method" ref="ddmrp.adu_calculation_method_fixed" />
+        <field name="adu_fixed">50.0</field>
+        <field name="order_spike_horizon">15</field>
+        <field name="warehouse_id" ref="stock.warehouse0" />
+        <field name="location_id" ref="stock.stock_location_stock" />
+        <field name="minimum_order_quantity">100.0</field>
+    </record>
+
+    <!-- DDMRP Buffer for Denim Fabric (Raw Material) -->
+    <record id="stock_buffer_denim" model="stock.buffer">
+        <field name="product_id" ref="product_raw_denim_fabric" />
+        <field
+            name="buffer_profile_id"
+            ref="ddmrp.stock_buffer_profile_replenish_purchased_medium_medium"
+        />
+        <field name="adu_calculation_method" ref="ddmrp.adu_calculation_method_fixed" />
+        <field name="adu_fixed">30.0</field>
+        <field name="order_spike_horizon">15</field>
+        <field name="warehouse_id" ref="stock.warehouse0" />
+        <field name="location_id" ref="stock.stock_location_stock" />
+        <field name="minimum_order_quantity">50.0</field>
+    </record>
+
+    <!-- DDMRP Buffer for Finished T-Shirt (Decoupled Finished Good) -->
+    <record id="stock_buffer_tshirt" model="stock.buffer">
+        <field name="product_id" ref="product_fg_tshirt" />
+        <field
+            name="buffer_profile_id"
+            ref="ddmrp.stock_buffer_profile_replenish_manufactured_medium_medium"
+        />
+        <field name="adu_calculation_method" ref="ddmrp.adu_calculation_method_fixed" />
+        <field name="adu_fixed">40.0</field>
+        <field name="order_spike_horizon">10</field>
+        <field name="warehouse_id" ref="stock.warehouse0" />
+        <field name="location_id" ref="stock.stock_location_stock" />
+        <field name="minimum_order_quantity">25.0</field>
+    </record>
+</odoo>

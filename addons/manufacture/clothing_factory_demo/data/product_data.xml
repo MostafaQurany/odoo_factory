@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <!-- Raw Materials -->
+    <record id="product_raw_cotton_fabric" model="product.product">
+        <field name="name">100% Organic Cotton Fabric Roll</field>
+        <field name="default_code">RAW-COT-01</field>
+        <field name="type">consu</field>
+        <field name="is_storable">True</field>
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
+        <field name="standard_price">4.50</field>
+        <field name="list_price">6.50</field>
+        <field name="description">Premium unbleached organic cotton fabric roll for t-shirt and apparel manufacturing.</field>
+    </record>
+
+    <record id="product_raw_denim_fabric" model="product.product">
+        <field name="name">Indigo Raw Denim Fabric Roll</field>
+        <field name="default_code">RAW-DEN-01</field>
+        <field name="type">consu</field>
+        <field name="is_storable">True</field>
+        <field name="uom_id" ref="uom.product_uom_meter" />
+        <field name="uom_po_id" ref="uom.product_uom_meter" />
+        <field name="standard_price">7.20</field>
+        <field name="list_price">11.00</field>
+        <field name="description">13oz heavyweight indigo raw denim fabric for jackets and durable workwear.</field>
+    </record>
+
+    <record id="product_raw_thread" model="product.product">
+        <field name="name">Heavy Polyester Sewing Thread Spool</field>
+        <field name="default_code">RAW-THR-01</field>
+        <field name="type">consu</field>
+        <field name="is_storable">True</field>
+        <field name="uom_id" ref="uom.product_uom_unit" />
+        <field name="uom_po_id" ref="uom.product_uom_unit" />
+        <field name="standard_price">2.10</field>
+        <field name="list_price">3.50</field>
+        <field name="description">High-tensile industrial spun polyester thread (1000m spool).</field>
+    </record>
+
+    <record id="product_raw_buttons" model="product.product">
+        <field name="name">Antique Brass Shank Buttons</field>
+        <field name="default_code">RAW-BTN-01</field>
+        <field name="type">consu</field>
+        <field name="is_storable">True</field>
+        <field name="uom_id" ref="uom.product_uom_unit" />
+        <field name="uom_po_id" ref="uom.product_uom_unit" />
+        <field name="standard_price">0.25</field>
+        <field name="list_price">0.50</field>
+        <field name="description">Vintage brass metal buttons for denim jackets and shirts.</field>
+    </record>
+
+    <record id="product_raw_zipper" model="product.product">
+        <field name="name">Metal YKK Zipper 20cm</field>
+        <field name="default_code">RAW-ZIP-01</field>
+        <field name="type">consu</field>
+        <field name="is_storable">True</field>
+        <field name="uom_id" ref="uom.product_uom_unit" />
+        <field name="uom_po_id" ref="uom.product_uom_unit" />
+        <field name="standard_price">1.15</field>
+        <field name="list_price">2.00</field>
+        <field name="description">Heavy metal teeth zipper with auto-lock slider.</field>
+    </record>
+
+    <record id="product_raw_label" model="product.product">
+        <field name="name">Woven Neck Labels &amp; Care Tags</field>
+        <field name="default_code">RAW-LBL-01</field>
+        <field name="type">consu</field>
+        <field name="is_storable">True</field>
+        <field name="uom_id" ref="uom.product_uom_unit" />
+        <field name="uom_po_id" ref="uom.product_uom_unit" />
+        <field name="standard_price">0.10</field>
+        <field name="list_price">0.20</field>
+        <field name="description">Damask woven brand neck tags and compliance washing instructions.</field>
+    </record>
+
+    <record id="product_pkg_polybag" model="product.product">
+        <field name="name">Biodegradable Poly Bag</field>
+        <field name="default_code">PKG-BAG-01</field>
+        <field name="type">consu</field>
+        <field name="is_storable">True</field>
+        <field name="uom_id" ref="uom.product_uom_unit" />
+        <field name="uom_po_id" ref="uom.product_uom_unit" />
+        <field name="standard_price">0.08</field>
+        <field name="list_price">0.15</field>
+        <field name="description">Clear self-seal compostable garment protective packaging bag.</field>
+    </record>
+
+    <!-- Finished Goods -->
+    <record id="product_fg_tshirt" model="product.product">
+        <field name="name">Classic Organic Cotton T-Shirt</field>
+        <field name="default_code">FG-TSHIRT-01</field>
+        <field name="type">consu</field>
+        <field name="is_storable">True</field>
+        <field name="uom_id" ref="uom.product_uom_unit" />
+        <field name="uom_po_id" ref="uom.product_uom_unit" />
+        <field name="standard_price">8.50</field>
+        <field name="list_price">28.00</field>
+        <field name="description">Finished short-sleeve crewneck organic cotton t-shirt.</field>
+    </record>
+
+    <record id="product_fg_denim_jacket" model="product.product">
+        <field name="name">Classic Denim Jacket</field>
+        <field name="default_code">FG-DENIM-01</field>
+        <field name="type">consu</field>
+        <field name="is_storable">True</field>
+        <field name="uom_id" ref="uom.product_uom_unit" />
+        <field name="uom_po_id" ref="uom.product_uom_unit" />
+        <field name="standard_price">24.00</field>
+        <field name="list_price">85.00</field>
+        <field name="description">Finished heavyweight raw denim jacket with custom brass hardware.</field>
+    </record>
+</odoo>

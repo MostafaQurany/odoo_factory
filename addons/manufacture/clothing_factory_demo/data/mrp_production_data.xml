@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <!-- Sample Manufacturing Order 1: 50x Classic Organic Cotton T-Shirts -->
+    <record id="mo_tshirt_sample_1" model="mrp.production">
+        <field name="product_id" ref="product_fg_tshirt" />
+        <field name="product_qty">50.0</field>
+        <field name="bom_id" ref="bom_tshirt" />
+        <field name="product_uom_id" ref="uom.product_uom_unit" />
+    </record>
+
+    <!-- Sample Manufacturing Order 2: 25x Classic Denim Jackets -->
+    <record id="mo_denim_sample_2" model="mrp.production">
+        <field name="product_id" ref="product_fg_denim_jacket" />
+        <field name="product_qty">25.0</field>
+        <field name="bom_id" ref="bom_denim_jacket" />
+        <field name="product_uom_id" ref="uom.product_uom_unit" />
+    </record>
+</odoo>

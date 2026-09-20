@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <!-- BOM for Classic Organic Cotton T-Shirt -->
+    <record id="bom_tshirt" model="mrp.bom">
+        <field name="product_tmpl_id" ref="product_fg_tshirt_product_template" />
+        <field name="product_id" ref="product_fg_tshirt" />
+        <field name="product_qty">1.0</field>
+        <field name="product_uom_id" ref="uom.product_uom_unit" />
+        <field name="type">normal</field>
+        <field name="code">BOM-TSHIRT-01</field>
+    </record>
+
+    <!-- Components for T-Shirt -->
+    <record id="bom_line_tshirt_cotton" model="mrp.bom.line">
+        <field name="bom_id" ref="bom_tshirt" />
+        <field name="product_id" ref="product_raw_cotton_fabric" />
+        <field name="product_qty">1.50</field>
+        <field name="product_uom_id" ref="uom.product_uom_meter" />
+        <field name="sequence">1</field>
+    </record>
+
+    <record id="bom_line_tshirt_thread" model="mrp.bom.line">
+        <field name="bom_id" ref="bom_tshirt" />
+        <field name="product_id" ref="product_raw_thread" />
+        <field name="product_qty">0.05</field>
+        <field name="product_uom_id" ref="uom.product_uom_unit" />
+        <field name="sequence">2</field>
+    </record>
+
+    <record id="bom_line_tshirt_label" model="mrp.bom.line">
+        <field name="bom_id" ref="bom_tshirt" />
+        <field name="product_id" ref="product_raw_label" />
+        <field name="product_qty">1.0</field>
+        <field name="product_uom_id" ref="uom.product_uom_unit" />
+        <field name="sequence">3</field>
+    </record>
+
+    <record id="bom_line_tshirt_polybag" model="mrp.bom.line">
+        <field name="bom_id" ref="bom_tshirt" />
+        <field name="product_id" ref="product_pkg_polybag" />
+        <field name="product_qty">1.0</field>
+        <field name="product_uom_id" ref="uom.product_uom_unit" />
+        <field name="sequence">4</field>
+    </record>
+
+    <!-- Operations for T-Shirt -->
+    <record id="routing_tshirt_cutting" model="mrp.routing.workcenter">
+        <field name="name">Pattern &amp; Panel Cutting</field>
+        <field name="workcenter_id" ref="workcenter_cutting" />
+        <field name="bom_id" ref="bom_tshirt" />
+        <field name="time_cycle_manual">10.0</field>
+        <field name="sequence">1</field>
+    </record>
+
+    <record id="routing_tshirt_sewing" model="mrp.routing.workcenter">
+        <field name="name">Stitching &amp; Overlock Assembly</field>
+        <field name="workcenter_id" ref="workcenter_sewing" />
+        <field name="bom_id" ref="bom_tshirt" />
+        <field name="time_cycle_manual">20.0</field>
+        <field name="sequence">2</field>
+    </record>
+
+    <record id="routing_tshirt_quality_press" model="mrp.routing.workcenter">
+        <field name="name">QC &amp; Steam Pressing</field>
+        <field name="workcenter_id" ref="workcenter_quality_press" />
+        <field name="bom_id" ref="bom_tshirt" />
+        <field name="time_cycle_manual">5.0</field>
+        <field name="sequence">3</field>
+    </record>
+
+    <record id="routing_tshirt_packaging" model="mrp.routing.workcenter">
+        <field name="name">Folding &amp; Poly-bagging</field>
+        <field name="workcenter_id" ref="workcenter_packaging" />
+        <field name="bom_id" ref="bom_tshirt" />
+        <field name="time_cycle_manual">5.0</field>
+        <field name="sequence">4</field>
+    </record>
+
+
+    <!-- BOM for Classic Denim Jacket -->
+    <record id="bom_denim_jacket" model="mrp.bom">
+        <field name="product_tmpl_id" ref="product_fg_denim_jacket_product_template" />
+        <field name="product_id" ref="product_fg_denim_jacket" />
+        <field name="product_qty">1.0</field>
+        <field name="product_uom_id" ref="uom.product_uom_unit" />
+        <field name="type">normal</field>
+        <field name="code">BOM-DENIM-01</field>
+    </record>
+
+    <!-- Components for Denim Jacket -->
+    <record id="bom_line_denim_fabric" model="mrp.bom.line">
+        <field name="bom_id" ref="bom_denim_jacket" />
+        <field name="product_id" ref="product_raw_denim_fabric" />
+        <field name="product_qty">2.80</field>
+        <field name="product_uom_id" ref="uom.product_uom_meter" />
+        <field name="sequence">1</field>
+    </record>
+
+    <record id="bom_line_denim_thread" model="mrp.bom.line">
+        <field name="bom_id" ref="bom_denim_jacket" />
+        <field name="product_id" ref="product_raw_thread" />
+        <field name="product_qty">0.20</field>
+        <field name="product_uom_id" ref="uom.product_uom_unit" />
+        <field name="sequence">2</field>
+    </record>
+
+    <record id="bom_line_denim_buttons" model="mrp.bom.line">
+        <field name="bom_id" ref="bom_denim_jacket" />
+        <field name="product_id" ref="product_raw_buttons" />
+        <field name="product_qty">6.0</field>
+        <field name="product_uom_id" ref="uom.product_uom_unit" />
+        <field name="sequence">3</field>
+    </record>
+
+    <record id="bom_line_denim_zipper" model="mrp.bom.line">
+        <field name="bom_id" ref="bom_denim_jacket" />
+        <field name="product_id" ref="product_raw_zipper" />
+        <field name="product_qty">1.0</field>
+        <field name="product_uom_id" ref="uom.product_uom_unit" />
+        <field name="sequence">4</field>
+    </record>
+
+    <record id="bom_line_denim_label" model="mrp.bom.line">
+        <field name="bom_id" ref="bom_denim_jacket" />
+        <field name="product_id" ref="product_raw_label" />
+        <field name="product_qty">1.0</field>
+        <field name="product_uom_id" ref="uom.product_uom_unit" />
+        <field name="sequence">5</field>
+    </record>
+
+    <record id="bom_line_denim_polybag" model="mrp.bom.line">
+        <field name="bom_id" ref="bom_denim_jacket" />
+        <field name="product_id" ref="product_pkg_polybag" />
+        <field name="product_qty">1.0</field>
+        <field name="product_uom_id" ref="uom.product_uom_unit" />
+        <field name="sequence">6</field>
+    </record>
+
+    <!-- Operations for Denim Jacket -->
+    <record id="routing_denim_cutting" model="mrp.routing.workcenter">
+        <field name="name">Heavy Denim Panel Cutting</field>
+        <field name="workcenter_id" ref="workcenter_cutting" />
+        <field name="bom_id" ref="bom_denim_jacket" />
+        <field name="time_cycle_manual">25.0</field>
+        <field name="sequence">1</field>
+    </record>
+
+    <record id="routing_denim_sewing" model="mrp.routing.workcenter">
+        <field name="name">Heavy Stitching &amp; Button Pressing</field>
+        <field name="workcenter_id" ref="workcenter_sewing" />
+        <field name="bom_id" ref="bom_denim_jacket" />
+        <field name="time_cycle_manual">50.0</field>
+        <field name="sequence">2</field>
+    </record>
+
+    <record id="routing_denim_quality_press" model="mrp.routing.workcenter">
+        <field name="name">Distress Inspection &amp; Steam Pressing</field>
+        <field name="workcenter_id" ref="workcenter_quality_press" />
+        <field name="bom_id" ref="bom_denim_jacket" />
+        <field name="time_cycle_manual">15.0</field>
+        <field name="sequence">3</field>
+    </record>
+
+    <record id="routing_denim_packaging" model="mrp.routing.workcenter">
+        <field name="name">Tagging &amp; Protective Packaging</field>
+        <field name="workcenter_id" ref="workcenter_packaging" />
+        <field name="bom_id" ref="bom_denim_jacket" />
+        <field name="time_cycle_manual">8.0</field>
+        <field name="sequence">4</field>
+    </record>
+</odoo>
