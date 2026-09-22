@@ -1,0 +1,2555 @@
+{
+  "nodes": [
+    "ddmrp",
+    "ddmrp_adjustment",
+    "ddmrp_adjustment_matrix",
+    "ddmrp_chatter",
+    "ddmrp_coverage_days",
+    "ddmrp_cron_actions_as_job",
+    "ddmrp_exclude_moves_adu_calc",
+    "ddmrp_exclude_moves_adu_calc_sales",
+    "ddmrp_history",
+    "ddmrp_packaging",
+    "ddmrp_packaging_product_replace",
+    "ddmrp_product_replace",
+    "ddmrp_purchase_hide_onhand_status",
+    "ddmrp_report_part_flow_index",
+    "ddmrp_warning",
+    "ddmrp_warning_as_job",
+    "stock_buffer_capacity_limit",
+    "stock_buffer_route",
+    "stock_buffer_sales_analysis",
+    "account_move_line_mrp_info",
+    "mrp_attachment_mgmt",
+    "mrp_bom_assign_auto",
+    "mrp_bom_attribute_match",
+    "mrp_bom_component_menu",
+    "mrp_bom_hierarchy",
+    "mrp_bom_image",
+    "mrp_bom_line_formula_quantity",
+    "mrp_bom_line_uom_rounding",
+    "mrp_bom_location",
+    "mrp_bom_note",
+    "mrp_bom_select_product_variant",
+    "mrp_bom_tracking",
+    "mrp_bom_version",
+    "mrp_bom_warn_message_oca",
+    "mrp_bom_widget_section_and_note_one2many",
+    "mrp_byproduct_auto_create_lot",
+    "mrp_lot_number_propagation",
+    "mrp_lot_production_date",
+    "mrp_mass_production_order",
+    "mrp_multi_level",
+    "mrp_multi_level_consume_safety_stock",
+    "mrp_multi_level_estimate",
+    "mrp_package_propagation",
+    "mrp_packaging_default",
+    "mrp_production_allow_recursive",
+    "mrp_production_auto_validate",
+    "mrp_production_back_to_draft",
+    "mrp_production_check_bom_alignment",
+    "mrp_production_date_planned_finished",
+    "mrp_production_location_picking_type",
+    "mrp_production_note",
+    "mrp_production_picking_type_from_route",
+    "mrp_production_putaway_strategy",
+    "mrp_propagate_lot_info",
+    "mrp_repair_order",
+    "mrp_restrict_lot",
+    "mrp_sale_info",
+    "mrp_stock_move_actual_date",
+    "mrp_stock_move_line_qty_picked",
+    "mrp_subcontracting_inhibit",
+    "mrp_subcontracting_purchase_link",
+    "mrp_subcontracting_skip_no_negative",
+    "mrp_tag",
+    "mrp_unbuild_move_link",
+    "mrp_unbuild_valuation_layer_link",
+    "mrp_warehouse_calendar",
+    "mrp_workcenter_scrap_reason",
+    "mrp_workorder_blocking_time",
+    "mrp_workorder_sequence",
+    "printing_auto_mrp",
+    "product_mrp_info",
+    "quality_control_mrp_oca",
+    "quality_control_oca",
+    "quality_control_stock_oca",
+    "sale_mrp_bom_menu",
+    "stock_whole_kit_constraint",
+    "base_import_async",
+    "queue_job",
+    "queue_job_batch",
+    "queue_job_cron",
+    "queue_job_cron_jobrunner",
+    "queue_job_profiler",
+    "queue_job_subscribe",
+    "test_queue_job",
+    "test_queue_job_batch",
+    "base_external_dbsource",
+    "base_external_dbsource_mssql",
+    "base_external_dbsource_mysql",
+    "base_external_dbsource_sqlite",
+    "base_external_system",
+    "base_global_discount",
+    "base_group_backend",
+    "base_ical",
+    "base_import_match",
+    "base_portal_type",
+    "base_user_effective_permissions",
+    "base_user_role",
+    "base_user_role_company",
+    "base_user_role_history",
+    "base_user_role_profile",
+    "server_action_navigate",
+    "server_action_sort",
+    "attachment_delete_restrict",
+    "attachment_queue",
+    "attachment_synchronize",
+    "attachment_unindex_content",
+    "auditlog",
+    "auto_backup",
+    "autovacuum_message_attachment",
+    "base_conditional_image",
+    "base_cron_exclusion",
+    "base_exception",
+    "base_fontawesome",
+    "base_fontawesome_web_editor",
+    "base_force_record_noupdate",
+    "base_m2m_custom_field",
+    "base_model_restrict_update",
+    "base_multi_image",
+    "base_name_search_improved",
+    "base_partition",
+    "base_remote",
+    "base_search_fuzzy",
+    "base_sequence_option",
+    "base_sparse_field_list_support",
+    "base_technical_user",
+    "base_temporary_action",
+    "base_time_parameter",
+    "base_time_window",
+    "base_view_inheritance_extension",
+    "bus_alt_connection",
+    "database_autovacuum_tuning",
+    "database_cleanup",
+    "database_size",
+    "dbfilter_from_header",
+    "excel_import_export",
+    "fetchmail_attach_from_folder",
+    "fetchmail_notify_error_to_sender",
+    "field_vector",
+    "html_text",
+    "iap_alternative_provider",
+    "jsonifier",
+    "mail_cleanup",
+    "mail_template_attachment_per_lang",
+    "module_analysis",
+    "module_auto_update",
+    "module_change_auto_install",
+    "odoo_test_xmlrunner",
+    "onchange_helper",
+    "rpc_helper",
+    "scheduler_error_mailer",
+    "sentry",
+    "sequence_python",
+    "session_db",
+    "test_auditlog",
+    "test_base_time_window",
+    "tracking_manager",
+    "tracking_manager_domain",
+    "upgrade_analysis",
+    "stock_available",
+    "stock_available_base_exclude_location",
+    "stock_available_immediately",
+    "stock_available_immediately_exclude_location",
+    "stock_available_location_get_domain",
+    "stock_available_unreserved",
+    "stock_free_quantity",
+    "stock_picking_product_availability_inline",
+    "purchase_stock_product_replenish_supplier",
+    "stock_location_orderpoint",
+    "stock_orderpoint_default_location",
+    "stock_orderpoint_generator",
+    "stock_orderpoint_manual_procurement",
+    "stock_orderpoint_move_link",
+    "stock_orderpoint_mto_as_mts",
+    "stock_orderpoint_no_horizon",
+    "stock_orderpoint_purchase_link",
+    "stock_orderpoint_uom",
+    "account_move_line_stock_info",
+    "procurement_auto_create_group",
+    "product_route_profile",
+    "product_route_profile_internal_resupply",
+    "stock_archive_constraint",
+    "stock_change_qty_reason",
+    "stock_cycle_count",
+    "stock_demand_estimate",
+    "stock_demand_estimate_matrix",
+    "stock_inventory",
+    "stock_inventory_count_to_zero",
+    "stock_inventory_discrepancy",
+    "stock_inventory_hide_apply_all",
+    "stock_inventory_location_state",
+    "stock_inventory_lockdown",
+    "stock_inventory_preparation_filter",
+    "stock_inventory_verification_request",
+    "stock_location_bin_name",
+    "stock_location_children",
+    "stock_location_empty",
+    "stock_location_fill_state",
+    "stock_location_fill_state_qty_picked",
+    "stock_location_is_sublocation",
+    "stock_location_lockdown",
+    "stock_location_pending_move",
+    "stock_location_position",
+    "stock_location_tray",
+    "stock_location_zone",
+    "stock_lot_catalog",
+    "stock_lot_catalog_condition",
+    "stock_lot_catalog_price",
+    "stock_lot_catalog_sale",
+    "stock_lot_catalog_warehouse",
+    "stock_lot_condition",
+    "stock_lot_image",
+    "stock_lot_list_price",
+    "stock_lot_multi_image",
+    "stock_lot_warehouse",
+    "stock_move_common_dest",
+    "stock_move_line_lot_link",
+    "stock_move_line_reference_link",
+    "stock_move_location",
+    "stock_move_location_purchase_uom",
+    "stock_move_packaging_qty",
+    "stock_move_purchase_uom",
+    "stock_move_reset_quantity",
+    "stock_mts_mto_rule",
+    "stock_package_type_volume",
+    "stock_packaging_calculator",
+    "stock_picking_batch_packaging_qty",
+    "stock_picking_commercial_partner",
+    "stock_picking_completion_info",
+    "stock_picking_procure_method",
+    "stock_picking_product_assortment",
+    "stock_picking_show_linked",
+    "stock_picking_stage",
+    "stock_picking_supplier_ref",
+    "stock_picking_volume",
+    "stock_picking_volume_packaging",
+    "stock_product_qty_by_packaging",
+    "stock_putaway_product_template",
+    "stock_quant_cost_info",
+    "stock_quant_reservation_info",
+    "stock_quant_reservation_info_mrp",
+    "stock_removal_location_by_priority",
+    "stock_restrict_immediate_adjustment",
+    "stock_route_location_source",
+    "stock_route_mto",
+    "stock_secondary_unit",
+    "stock_storage_category_capacity_name",
+    "stock_valuation_layer_inventory_filter",
+    "stock_vertical_lift",
+    "stock_vertical_lift_empty_tray_check",
+    "stock_vertical_lift_packaging_level",
+    "stock_vertical_lift_qty_by_packaging",
+    "stock_vertical_lift_server_env",
+    "stock_vertical_lift_storage_type",
+    "stock_vlm_mgmt",
+    "stock_vlm_mgmt_kardex",
+    "stock_vlm_mgmt_modula",
+    "stock_warehouse_calendar",
+    "stock_warehouse_out_pull",
+    "stock_warehouse_resupply_route_push",
+    "stock_warehouse_security",
+    "delivery_procurement_group_carrier",
+    "delivery_total_weight_from_packaging",
+    "procurement_auto_create_group_carrier",
+    "product_cost_price_avco_sync",
+    "product_customerinfo_picking",
+    "purchase_stock_picking_invoice_link",
+    "sale_line_returned_qty",
+    "sale_line_returned_qty_mrp",
+    "sale_order_global_stock_route",
+    "sale_stock_picking_invoice_link",
+    "sale_stock_restocking_fee_invoicing",
+    "scrap_reason_code",
+    "stock_account_product_run_fifo_hook",
+    "stock_account_show_automatic_valuation",
+    "stock_checkout_sync",
+    "stock_dangerous_goods",
+    "stock_dynamic_routing",
+    "stock_dynamic_routing_checkout_sync",
+    "stock_dynamic_routing_delivery",
+    "stock_dynamic_routing_delivery_procurement_group_carrier",
+    "stock_dynamic_routing_reserve_rule",
+    "stock_landed_costs_priority",
+    "stock_landed_costs_purchase_auto",
+    "stock_lock_lot",
+    "stock_lot_scrap",
+    "stock_move_actual_date",
+    "stock_move_auto_assign_auto_release",
+    "stock_move_backdating",
+    "stock_move_forced_lot",
+    "stock_move_line_change_lot",
+    "stock_move_line_dates",
+    "stock_move_line_expiration_date_required",
+    "stock_move_line_qty_picked",
+    "stock_move_original_date",
+    "stock_move_propagate_first_move",
+    "stock_move_quantity_product_uom",
+    "stock_move_source_relocate",
+    "stock_move_source_relocate_dynamic_routing",
+    "stock_move_vendor_comment",
+    "stock_no_negative",
+    "stock_override_procurement",
+    "stock_owner_restriction",
+    "stock_partner_delivery_window",
+    "stock_picking_auto_create_lot",
+    "stock_picking_auto_create_lot_sequence",
+    "stock_picking_auto_create_package",
+    "stock_picking_back2draft",
+    "stock_picking_backorder_strategy_cancel",
+    "stock_picking_batch_account",
+    "stock_picking_batch_account_sale_type",
+    "stock_picking_batch_creation",
+    "stock_picking_batch_creation_split_kit",
+    "stock_picking_batch_extended",
+    "stock_picking_batch_invoice_frequency",
+    "stock_picking_batch_operation_quick_change",
+    "stock_picking_batch_outgoing",
+    "stock_picking_batch_planner",
+    "stock_picking_batch_print_invoices",
+    "stock_picking_batch_print_pickings",
+    "stock_picking_batch_validate_confirm",
+    "stock_picking_consolidation_priority",
+    "stock_picking_customer_ref",
+    "stock_picking_date_deadline_syncs_scheduled_date",
+    "stock_picking_filter_lot",
+    "stock_picking_group_by_base",
+    "stock_picking_group_by_partner_by_carrier",
+    "stock_picking_group_by_partner_by_carrier_by_date",
+    "stock_picking_group_by_partner_by_carrier_force_move_type",
+    "stock_picking_immediate_transfer_warning",
+    "stock_picking_import_serial_number",
+    "stock_picking_invoice_link",
+    "stock_picking_kind",
+    "stock_picking_line_sequence",
+    "stock_picking_mass_action",
+    "stock_picking_operation_quick_change",
+    "stock_picking_origin_reference",
+    "stock_picking_origin_reference_purchase",
+    "stock_picking_origin_reference_sale",
+    "stock_picking_partner_note",
+    "stock_picking_partner_vat",
+    "stock_picking_progress",
+    "stock_picking_propagate_scheduled_date",
+    "stock_picking_purchase_order_link",
+    "stock_picking_restrict_cancel_printed",
+    "stock_picking_restrict_cancel_with_orig_move",
+    "stock_picking_restrict_partial_validation",
+    "stock_picking_return_empty_package",
+    "stock_picking_return_lot",
+    "stock_picking_return_restricted_qty",
+    "stock_picking_sale_order_link",
+    "stock_picking_send_by_mail",
+    "stock_picking_show_backorder",
+    "stock_picking_show_lot",
+    "stock_picking_show_return",
+    "stock_picking_tier_validation",
+    "stock_picking_to_batch_group_fields",
+    "stock_picking_type_bypass_reservation",
+    "stock_picking_type_force_move_type",
+    "stock_picking_variable_qty",
+    "stock_picking_warn_message",
+    "stock_picking_whole_scrap",
+    "stock_product_set",
+    "stock_production_lot_active",
+    "stock_receipt_lot_info",
+    "stock_reception_discrepancy_distribution",
+    "stock_reporting_access",
+    "stock_restrict_lot",
+    "stock_scrap_cancel",
+    "stock_scrap_security",
+    "stock_scrap_tier_validation",
+    "stock_split_picking",
+    "stock_split_picking_dimension",
+    "stock_split_picking_kit",
+    "stock_valuation_layer_usage",
+    "stock_warn_option",
+    "web_action_conditionable",
+    "web_calendar_slot_duration",
+    "web_chatter_position",
+    "web_company_color",
+    "web_copy_confirm",
+    "web_dark_mode",
+    "web_datetime_picker_default_time",
+    "web_dialog_size",
+    "web_disable_export_group",
+    "web_editor_class_selector",
+    "web_editor_disable_chatgpt",
+    "web_environment_ribbon",
+    "web_excel_export_dynamic_expand",
+    "web_favicon",
+    "web_filter_header_button",
+    "web_font_size_report_layout",
+    "web_form_banner",
+    "web_group_expand",
+    "web_help",
+    "web_ir_actions_act_multi",
+    "web_ir_actions_act_window_message",
+    "web_m2x_options",
+    "web_m2x_options_manager",
+    "web_no_bubble",
+    "web_notify",
+    "web_notify_channel_message",
+    "web_notify_upgrade",
+    "web_pivot_computed_measure",
+    "web_portal_properties",
+    "web_pwa_customize",
+    "web_quick_start_screen",
+    "web_refresher",
+    "web_remember_tree_column_width",
+    "web_responsive",
+    "web_responsive_company_color",
+    "web_save_discard_button",
+    "web_search_with_and",
+    "web_send_message_popup",
+    "web_session_auto_close",
+    "web_sort_menu",
+    "web_systray_button_init_action",
+    "web_theme_classic",
+    "web_time_range_menu_custom",
+    "web_timeline",
+    "web_toggle_chatter",
+    "web_touchscreen",
+    "web_tree_column_keyboard_resize",
+    "web_tree_dynamic_colored_field",
+    "web_tree_many2one_clickable",
+    "web_widget_bokeh_chart",
+    "web_widget_char_size",
+    "web_widget_domain_editor_dialog",
+    "web_widget_dropdown_dynamic",
+    "web_widget_image_download",
+    "web_widget_mpld3_chart",
+    "web_widget_numeric_step",
+    "web_widget_o2m_attachment_image_gallery",
+    "web_widget_one2many_tree_line_duplicate",
+    "web_widget_open_tab",
+    "web_widget_pattern",
+    "web_widget_popover",
+    "web_widget_product_label_section_and_note_full_label",
+    "web_widget_product_label_section_and_note_name_visibility",
+    "web_widget_url_advanced",
+    "web_widget_x2many_2d_matrix",
+    "clothing_factory_demo",
+    "odoo_factory_all"
+  ],
+  "edges": {
+    "ddmrp": [
+      "purchase_stock",
+      "stock_demand_estimate",
+      "web_widget_bokeh_chart",
+      "mrp_multi_level",
+      "base_cron_exclusion",
+      "stock_warehouse_calendar",
+      "stock_location_is_sublocation",
+      "stock_move_quantity_product_uom"
+    ],
+    "ddmrp_adjustment": [
+      "ddmrp",
+      "date_range"
+    ],
+    "ddmrp_adjustment_matrix": [
+      "ddmrp_adjustment",
+      "web_widget_x2many_2d_matrix"
+    ],
+    "ddmrp_chatter": [
+      "ddmrp"
+    ],
+    "ddmrp_coverage_days": [
+      "ddmrp"
+    ],
+    "ddmrp_cron_actions_as_job": [
+      "ddmrp",
+      "queue_job"
+    ],
+    "ddmrp_exclude_moves_adu_calc": [
+      "ddmrp"
+    ],
+    "ddmrp_exclude_moves_adu_calc_sales": [
+      "sale",
+      "ddmrp_exclude_moves_adu_calc"
+    ],
+    "ddmrp_history": [
+      "ddmrp"
+    ],
+    "ddmrp_packaging": [
+      "ddmrp"
+    ],
+    "ddmrp_packaging_product_replace": [
+      "ddmrp_product_replace",
+      "ddmrp_packaging"
+    ],
+    "ddmrp_product_replace": [
+      "ddmrp_chatter"
+    ],
+    "ddmrp_purchase_hide_onhand_status": [
+      "ddmrp"
+    ],
+    "ddmrp_report_part_flow_index": [
+      "ddmrp"
+    ],
+    "ddmrp_warning": [
+      "ddmrp"
+    ],
+    "ddmrp_warning_as_job": [
+      "ddmrp_warning",
+      "ddmrp_cron_actions_as_job"
+    ],
+    "stock_buffer_capacity_limit": [
+      "ddmrp"
+    ],
+    "stock_buffer_route": [
+      "ddmrp"
+    ],
+    "stock_buffer_sales_analysis": [
+      "ddmrp",
+      "sale",
+      "sales_team"
+    ],
+    "account_move_line_mrp_info": [
+      "account_move_line_stock_info",
+      "mrp"
+    ],
+    "mrp_attachment_mgmt": [
+      "mrp"
+    ],
+    "mrp_bom_assign_auto": [
+      "mrp"
+    ],
+    "mrp_bom_attribute_match": [
+      "mrp"
+    ],
+    "mrp_bom_component_menu": [
+      "mrp"
+    ],
+    "mrp_bom_hierarchy": [
+      "mrp"
+    ],
+    "mrp_bom_image": [
+      "mrp"
+    ],
+    "mrp_bom_line_formula_quantity": [
+      "mrp"
+    ],
+    "mrp_bom_line_uom_rounding": [
+      "mrp"
+    ],
+    "mrp_bom_location": [
+      "mrp"
+    ],
+    "mrp_bom_note": [
+      "mrp"
+    ],
+    "mrp_bom_select_product_variant": [
+      "mrp"
+    ],
+    "mrp_bom_tracking": [
+      "mrp"
+    ],
+    "mrp_bom_version": [
+      "mrp"
+    ],
+    "mrp_bom_warn_message_oca": [
+      "mrp"
+    ],
+    "mrp_bom_widget_section_and_note_one2many": [
+      "mrp",
+      "account"
+    ],
+    "mrp_byproduct_auto_create_lot": [
+      "mrp",
+      "stock",
+      "stock_picking_auto_create_lot"
+    ],
+    "mrp_lot_number_propagation": [
+      "mrp"
+    ],
+    "mrp_lot_production_date": [
+      "mrp",
+      "stock_lot_production_date"
+    ],
+    "mrp_mass_production_order": [
+      "mrp_tag"
+    ],
+    "mrp_multi_level": [
+      "mrp",
+      "purchase_stock",
+      "mrp_warehouse_calendar"
+    ],
+    "mrp_multi_level_consume_safety_stock": [
+      "mrp_multi_level"
+    ],
+    "mrp_multi_level_estimate": [
+      "mrp_multi_level",
+      "stock_demand_estimate"
+    ],
+    "mrp_package_propagation": [
+      "mrp"
+    ],
+    "mrp_packaging_default": [
+      "mrp",
+      "stock_move_packaging_qty"
+    ],
+    "mrp_production_allow_recursive": [
+      "mrp"
+    ],
+    "mrp_production_auto_validate": [
+      "mrp"
+    ],
+    "mrp_production_back_to_draft": [
+      "mrp"
+    ],
+    "mrp_production_check_bom_alignment": [
+      "mrp"
+    ],
+    "mrp_production_date_planned_finished": [
+      "mrp"
+    ],
+    "mrp_production_location_picking_type": [
+      "mrp"
+    ],
+    "mrp_production_note": [
+      "mrp"
+    ],
+    "mrp_production_picking_type_from_route": [
+      "mrp"
+    ],
+    "mrp_production_putaway_strategy": [
+      "mrp"
+    ],
+    "mrp_propagate_lot_info": [
+      "mrp"
+    ],
+    "mrp_repair_order": [
+      "mrp",
+      "repair"
+    ],
+    "mrp_restrict_lot": [
+      "stock_restrict_lot",
+      "mrp"
+    ],
+    "mrp_sale_info": [
+      "sale_mrp",
+      "sale_stock"
+    ],
+    "mrp_stock_move_actual_date": [
+      "mrp",
+      "stock_move_actual_date"
+    ],
+    "mrp_stock_move_line_qty_picked": [
+      "mrp",
+      "stock_move_line_qty_picked"
+    ],
+    "mrp_subcontracting_inhibit": [
+      "mrp_subcontracting",
+      "purchase"
+    ],
+    "mrp_subcontracting_purchase_link": [
+      "purchase",
+      "mrp_subcontracting"
+    ],
+    "mrp_subcontracting_skip_no_negative": [
+      "mrp_subcontracting",
+      "stock_no_negative"
+    ],
+    "mrp_tag": [
+      "mrp"
+    ],
+    "mrp_unbuild_move_link": [
+      "mrp_account"
+    ],
+    "mrp_unbuild_valuation_layer_link": [
+      "mrp_account"
+    ],
+    "mrp_warehouse_calendar": [
+      "mrp",
+      "stock_warehouse_calendar"
+    ],
+    "mrp_workcenter_scrap_reason": [
+      "mrp",
+      "scrap_reason_code"
+    ],
+    "mrp_workorder_blocking_time": [
+      "mrp"
+    ],
+    "mrp_workorder_sequence": [
+      "mrp"
+    ],
+    "printing_auto_mrp": [
+      "printing_auto_stock_picking",
+      "mrp"
+    ],
+    "product_mrp_info": [
+      "mrp"
+    ],
+    "quality_control_mrp_oca": [
+      "quality_control_oca",
+      "quality_control_stock_oca",
+      "mrp"
+    ],
+    "quality_control_oca": [
+      "product"
+    ],
+    "quality_control_stock_oca": [
+      "quality_control_oca",
+      "stock"
+    ],
+    "sale_mrp_bom_menu": [
+      "sale",
+      "mrp"
+    ],
+    "stock_whole_kit_constraint": [
+      "mrp"
+    ],
+    "base_import_async": [
+      "base_import",
+      "queue_job"
+    ],
+    "queue_job": [
+      "mail",
+      "base_sparse_field",
+      "web"
+    ],
+    "queue_job_batch": [
+      "queue_job"
+    ],
+    "queue_job_cron": [
+      "queue_job"
+    ],
+    "queue_job_cron_jobrunner": [
+      "queue_job"
+    ],
+    "queue_job_profiler": [
+      "queue_job"
+    ],
+    "queue_job_subscribe": [
+      "queue_job"
+    ],
+    "test_queue_job": [
+      "queue_job"
+    ],
+    "test_queue_job_batch": [
+      "queue_job_batch",
+      "test_queue_job"
+    ],
+    "base_external_dbsource": [
+      "base"
+    ],
+    "base_external_dbsource_mssql": [
+      "base_external_dbsource"
+    ],
+    "base_external_dbsource_mysql": [
+      "base_external_dbsource"
+    ],
+    "base_external_dbsource_sqlite": [
+      "base_external_dbsource"
+    ],
+    "base_external_system": [
+      "base"
+    ],
+    "base_global_discount": [
+      "product"
+    ],
+    "base_group_backend": [
+      "base",
+      "mail",
+      "calendar"
+    ],
+    "base_ical": [
+      "web"
+    ],
+    "base_import_match": [
+      "base_import"
+    ],
+    "base_portal_type": [
+      "portal"
+    ],
+    "base_user_effective_permissions": [
+      "base"
+    ],
+    "base_user_role": [
+      "base"
+    ],
+    "base_user_role_company": [
+      "base_user_role"
+    ],
+    "base_user_role_history": [
+      "mail",
+      "base_user_role"
+    ],
+    "base_user_role_profile": [
+      "base_user_role",
+      "web"
+    ],
+    "server_action_navigate": [
+      "base_automation"
+    ],
+    "server_action_sort": [
+      "base"
+    ],
+    "attachment_delete_restrict": [
+      "base",
+      "base_setup"
+    ],
+    "attachment_queue": [
+      "base",
+      "mail",
+      "queue_job"
+    ],
+    "attachment_synchronize": [
+      "attachment_queue",
+      "fs_storage"
+    ],
+    "attachment_unindex_content": [
+      "base"
+    ],
+    "auditlog": [
+      "base"
+    ],
+    "auto_backup": [
+      "mail"
+    ],
+    "autovacuum_message_attachment": [
+      "mail"
+    ],
+    "base_conditional_image": [
+      "base"
+    ],
+    "base_cron_exclusion": [
+      "base"
+    ],
+    "base_exception": [
+      "base_setup"
+    ],
+    "base_fontawesome": [
+      "web"
+    ],
+    "base_fontawesome_web_editor": [
+      "web_editor",
+      "base_fontawesome"
+    ],
+    "base_force_record_noupdate": [
+      "base"
+    ],
+    "base_m2m_custom_field": [
+      "base"
+    ],
+    "base_model_restrict_update": [
+      "base_setup"
+    ],
+    "base_multi_image": [
+      "base"
+    ],
+    "base_name_search_improved": [
+      "base"
+    ],
+    "base_partition": [
+      "base"
+    ],
+    "base_remote": [
+      "web"
+    ],
+    "base_search_fuzzy": [
+      "base"
+    ],
+    "base_sequence_option": [
+      "base"
+    ],
+    "base_sparse_field_list_support": [
+      "base",
+      "base_sparse_field"
+    ],
+    "base_technical_user": [
+      "base"
+    ],
+    "base_temporary_action": [
+      "base"
+    ],
+    "base_time_parameter": [
+      "base"
+    ],
+    "base_time_window": [
+      "base"
+    ],
+    "base_view_inheritance_extension": [
+      "base"
+    ],
+    "bus_alt_connection": [
+      "bus"
+    ],
+    "database_autovacuum_tuning": [
+      "base_setup"
+    ],
+    "database_cleanup": [
+      "base"
+    ],
+    "database_size": [
+      "base_setup"
+    ],
+    "dbfilter_from_header": [
+      "web"
+    ],
+    "excel_import_export": [
+      "mail"
+    ],
+    "fetchmail_attach_from_folder": [
+      "mail"
+    ],
+    "fetchmail_notify_error_to_sender": [
+      "mail"
+    ],
+    "field_vector": [
+      "base"
+    ],
+    "html_text": [
+      "base"
+    ],
+    "iap_alternative_provider": [
+      "iap"
+    ],
+    "jsonifier": [
+      "base"
+    ],
+    "mail_cleanup": [
+      "mail_environment"
+    ],
+    "mail_template_attachment_per_lang": [
+      "mail"
+    ],
+    "module_analysis": [
+      "base"
+    ],
+    "module_auto_update": [
+      "base"
+    ],
+    "module_change_auto_install": [
+      "base"
+    ],
+    "odoo_test_xmlrunner": [
+      "base"
+    ],
+    "onchange_helper": [
+      "web"
+    ],
+    "rpc_helper": [
+      "base_sparse_field"
+    ],
+    "scheduler_error_mailer": [
+      "mail"
+    ],
+    "sentry": [
+      "base"
+    ],
+    "sequence_python": [
+      "base"
+    ],
+    "session_db": [],
+    "test_auditlog": [
+      "account",
+      "auditlog"
+    ],
+    "test_base_time_window": [
+      "base_time_window"
+    ],
+    "tracking_manager": [
+      "mail"
+    ],
+    "tracking_manager_domain": [
+      "tracking_manager"
+    ],
+    "upgrade_analysis": [
+      "base"
+    ],
+    "stock_available": [
+      "stock"
+    ],
+    "stock_available_base_exclude_location": [
+      "stock"
+    ],
+    "stock_available_immediately": [
+      "stock_available"
+    ],
+    "stock_available_immediately_exclude_location": [
+      "stock_available_immediately",
+      "stock_available_location_get_domain"
+    ],
+    "stock_available_location_get_domain": [
+      "stock"
+    ],
+    "stock_available_unreserved": [
+      "stock"
+    ],
+    "stock_free_quantity": [
+      "stock"
+    ],
+    "stock_picking_product_availability_inline": [
+      "stock",
+      "base_view_inheritance_extension"
+    ],
+    "purchase_stock_product_replenish_supplier": [
+      "purchase_stock"
+    ],
+    "stock_location_orderpoint": [
+      "stock_available_base_exclude_location",
+      "stock_route_location_source",
+      "queue_job"
+    ],
+    "stock_orderpoint_default_location": [
+      "stock",
+      "base_partition"
+    ],
+    "stock_orderpoint_generator": [
+      "stock"
+    ],
+    "stock_orderpoint_manual_procurement": [
+      "purchase_stock"
+    ],
+    "stock_orderpoint_move_link": [
+      "stock"
+    ],
+    "stock_orderpoint_mto_as_mts": [
+      "base_partition",
+      "product_route_mto",
+      "stock",
+      "stock_orderpoint_default_location"
+    ],
+    "stock_orderpoint_no_horizon": [
+      "stock"
+    ],
+    "stock_orderpoint_purchase_link": [
+      "stock_orderpoint_move_link",
+      "purchase_stock"
+    ],
+    "stock_orderpoint_uom": [
+      "purchase_stock"
+    ],
+    "account_move_line_stock_info": [
+      "stock_account"
+    ],
+    "procurement_auto_create_group": [
+      "stock"
+    ],
+    "product_route_profile": [
+      "stock"
+    ],
+    "product_route_profile_internal_resupply": [
+      "product_route_profile"
+    ],
+    "stock_archive_constraint": [
+      "stock"
+    ],
+    "stock_change_qty_reason": [
+      "stock"
+    ],
+    "stock_cycle_count": [
+      "stock_account",
+      "stock_inventory_discrepancy",
+      "stock_inventory"
+    ],
+    "stock_demand_estimate": [
+      "stock"
+    ],
+    "stock_demand_estimate_matrix": [
+      "stock_demand_estimate",
+      "web_widget_x2many_2d_matrix",
+      "date_range"
+    ],
+    "stock_inventory": [
+      "stock"
+    ],
+    "stock_inventory_count_to_zero": [
+      "stock"
+    ],
+    "stock_inventory_discrepancy": [
+      "stock"
+    ],
+    "stock_inventory_hide_apply_all": [
+      "stock"
+    ],
+    "stock_inventory_location_state": [
+      "stock_inventory"
+    ],
+    "stock_inventory_lockdown": [
+      "stock",
+      "stock_inventory"
+    ],
+    "stock_inventory_preparation_filter": [
+      "stock",
+      "stock_inventory",
+      "base_view_inheritance_extension"
+    ],
+    "stock_inventory_verification_request": [
+      "stock_inventory",
+      "stock_inventory_discrepancy",
+      "mail"
+    ],
+    "stock_location_bin_name": [
+      "stock_location_zone",
+      "stock_location_position"
+    ],
+    "stock_location_children": [
+      "stock"
+    ],
+    "stock_location_empty": [
+      "stock"
+    ],
+    "stock_location_fill_state": [
+      "base_partition",
+      "stock",
+      "stock_location_pending_move"
+    ],
+    "stock_location_fill_state_qty_picked": [
+      "stock_location_fill_state",
+      "stock_move_line_qty_picked"
+    ],
+    "stock_location_is_sublocation": [
+      "stock"
+    ],
+    "stock_location_lockdown": [
+      "stock"
+    ],
+    "stock_location_pending_move": [
+      "stock"
+    ],
+    "stock_location_position": [
+      "stock"
+    ],
+    "stock_location_tray": [
+      "stock",
+      "base_sparse_field"
+    ],
+    "stock_location_zone": [
+      "stock"
+    ],
+    "stock_lot_catalog": [
+      "stock"
+    ],
+    "stock_lot_catalog_condition": [
+      "stock_lot_catalog",
+      "stock_lot_condition"
+    ],
+    "stock_lot_catalog_price": [
+      "stock_lot_catalog",
+      "stock_lot_list_price"
+    ],
+    "stock_lot_catalog_sale": [
+      "stock_lot_catalog",
+      "sale_order_lot_selection"
+    ],
+    "stock_lot_catalog_warehouse": [
+      "stock_lot_catalog",
+      "stock_lot_warehouse"
+    ],
+    "stock_lot_condition": [
+      "stock"
+    ],
+    "stock_lot_image": [
+      "stock"
+    ],
+    "stock_lot_list_price": [
+      "stock_account"
+    ],
+    "stock_lot_multi_image": [
+      "stock",
+      "base_multi_image"
+    ],
+    "stock_lot_warehouse": [
+      "stock"
+    ],
+    "stock_move_common_dest": [
+      "stock"
+    ],
+    "stock_move_line_lot_link": [
+      "stock"
+    ],
+    "stock_move_line_reference_link": [
+      "stock"
+    ],
+    "stock_move_location": [
+      "stock"
+    ],
+    "stock_move_location_purchase_uom": [
+      "stock_move_location",
+      "stock_move_purchase_uom"
+    ],
+    "stock_move_packaging_qty": [
+      "stock"
+    ],
+    "stock_move_purchase_uom": [
+      "stock"
+    ],
+    "stock_move_reset_quantity": [
+      "stock"
+    ],
+    "stock_mts_mto_rule": [
+      "stock"
+    ],
+    "stock_package_type_volume": [
+      "stock"
+    ],
+    "stock_packaging_calculator": [
+      "product_packaging_calculator"
+    ],
+    "stock_picking_batch_packaging_qty": [
+      "stock_picking_batch",
+      "stock_move_packaging_qty"
+    ],
+    "stock_picking_commercial_partner": [
+      "stock"
+    ],
+    "stock_picking_completion_info": [
+      "stock_move_common_dest"
+    ],
+    "stock_picking_procure_method": [
+      "stock"
+    ],
+    "stock_picking_product_assortment": [
+      "base_view_inheritance_extension",
+      "product_assortment",
+      "stock"
+    ],
+    "stock_picking_show_linked": [
+      "stock"
+    ],
+    "stock_picking_stage": [
+      "stock"
+    ],
+    "stock_picking_supplier_ref": [
+      "stock"
+    ],
+    "stock_picking_volume": [
+      "product_dimension",
+      "stock"
+    ],
+    "stock_picking_volume_packaging": [
+      "stock_picking_volume",
+      "stock_packaging_calculator",
+      "product_packaging_dimension"
+    ],
+    "stock_product_qty_by_packaging": [
+      "product_packaging_calculator",
+      "stock"
+    ],
+    "stock_putaway_product_template": [
+      "stock"
+    ],
+    "stock_quant_cost_info": [
+      "stock"
+    ],
+    "stock_quant_reservation_info": [
+      "stock"
+    ],
+    "stock_quant_reservation_info_mrp": [
+      "stock_quant_reservation_info",
+      "mrp"
+    ],
+    "stock_removal_location_by_priority": [
+      "stock"
+    ],
+    "stock_restrict_immediate_adjustment": [
+      "stock"
+    ],
+    "stock_route_location_source": [
+      "stock"
+    ],
+    "stock_route_mto": [
+      "stock"
+    ],
+    "stock_secondary_unit": [
+      "stock",
+      "product_secondary_unit"
+    ],
+    "stock_storage_category_capacity_name": [
+      "stock"
+    ],
+    "stock_valuation_layer_inventory_filter": [
+      "stock_account"
+    ],
+    "stock_vertical_lift": [
+      "stock",
+      "barcodes",
+      "base_sparse_field",
+      "stock_location_tray",
+      "web_notify"
+    ],
+    "stock_vertical_lift_empty_tray_check": [
+      "stock",
+      "stock_vertical_lift"
+    ],
+    "stock_vertical_lift_packaging_level": [
+      "stock_vertical_lift",
+      "product_packaging_level"
+    ],
+    "stock_vertical_lift_qty_by_packaging": [
+      "stock_product_qty_by_packaging",
+      "stock_vertical_lift"
+    ],
+    "stock_vertical_lift_server_env": [
+      "stock_vertical_lift",
+      "server_environment"
+    ],
+    "stock_vertical_lift_storage_type": [
+      "stock_vertical_lift",
+      "stock_storage_type"
+    ],
+    "stock_vlm_mgmt": [
+      "stock",
+      "base_sparse_field"
+    ],
+    "stock_vlm_mgmt_kardex": [
+      "stock_vlm_mgmt"
+    ],
+    "stock_vlm_mgmt_modula": [
+      "stock_vlm_mgmt"
+    ],
+    "stock_warehouse_calendar": [
+      "stock",
+      "resource"
+    ],
+    "stock_warehouse_out_pull": [
+      "stock"
+    ],
+    "stock_warehouse_resupply_route_push": [
+      "stock"
+    ],
+    "stock_warehouse_security": [
+      "stock"
+    ],
+    "delivery_procurement_group_carrier": [
+      "sale_stock",
+      "stock_delivery"
+    ],
+    "delivery_total_weight_from_packaging": [
+      "stock_delivery",
+      "product_total_weight_from_packaging"
+    ],
+    "procurement_auto_create_group_carrier": [
+      "delivery_procurement_group_carrier",
+      "procurement_auto_create_group"
+    ],
+    "product_cost_price_avco_sync": [
+      "stock_account"
+    ],
+    "product_customerinfo_picking": [
+      "stock",
+      "product_customerinfo"
+    ],
+    "purchase_stock_picking_invoice_link": [
+      "stock_picking_invoice_link",
+      "purchase_stock"
+    ],
+    "sale_line_returned_qty": [
+      "sale_stock"
+    ],
+    "sale_line_returned_qty_mrp": [
+      "sale_line_returned_qty",
+      "mrp"
+    ],
+    "sale_order_global_stock_route": [
+      "sale_stock"
+    ],
+    "sale_stock_picking_invoice_link": [
+      "sale_stock",
+      "stock_picking_invoice_link"
+    ],
+    "sale_stock_restocking_fee_invoicing": [
+      "sale",
+      "stock",
+      "sale_stock",
+      "stock_account",
+      "stock_picking_kind"
+    ],
+    "scrap_reason_code": [
+      "stock"
+    ],
+    "stock_account_product_run_fifo_hook": [
+      "stock_account"
+    ],
+    "stock_account_show_automatic_valuation": [
+      "stock_account"
+    ],
+    "stock_checkout_sync": [
+      "stock_move_common_dest"
+    ],
+    "stock_dangerous_goods": [
+      "stock",
+      "l10n_eu_product_adr_dangerous_goods"
+    ],
+    "stock_dynamic_routing": [
+      "stock"
+    ],
+    "stock_dynamic_routing_checkout_sync": [
+      "stock_dynamic_routing",
+      "stock_checkout_sync"
+    ],
+    "stock_dynamic_routing_delivery": [
+      "stock_dynamic_routing",
+      "stock_delivery"
+    ],
+    "stock_dynamic_routing_delivery_procurement_group_carrier": [
+      "stock_dynamic_routing_delivery",
+      "delivery_procurement_group_carrier"
+    ],
+    "stock_dynamic_routing_reserve_rule": [
+      "stock_dynamic_routing",
+      "stock_reserve_rule"
+    ],
+    "stock_landed_costs_priority": [
+      "stock_landed_costs"
+    ],
+    "stock_landed_costs_purchase_auto": [
+      "stock_landed_costs",
+      "purchase_stock"
+    ],
+    "stock_lock_lot": [
+      "stock",
+      "product"
+    ],
+    "stock_lot_scrap": [
+      "stock"
+    ],
+    "stock_move_actual_date": [
+      "stock_account"
+    ],
+    "stock_move_auto_assign_auto_release": [
+      "stock_available_to_promise_release",
+      "stock_move_auto_assign"
+    ],
+    "stock_move_backdating": [
+      "stock_account"
+    ],
+    "stock_move_forced_lot": [
+      "stock"
+    ],
+    "stock_move_line_change_lot": [
+      "stock"
+    ],
+    "stock_move_line_dates": [
+      "stock"
+    ],
+    "stock_move_line_expiration_date_required": [
+      "product_expiry"
+    ],
+    "stock_move_line_qty_picked": [
+      "stock"
+    ],
+    "stock_move_original_date": [
+      "stock"
+    ],
+    "stock_move_propagate_first_move": [
+      "stock"
+    ],
+    "stock_move_quantity_product_uom": [
+      "stock"
+    ],
+    "stock_move_source_relocate": [
+      "stock",
+      "stock_location_is_sublocation",
+      "stock_route_location_source"
+    ],
+    "stock_move_source_relocate_dynamic_routing": [
+      "stock_dynamic_routing",
+      "stock_move_source_relocate"
+    ],
+    "stock_move_vendor_comment": [
+      "stock"
+    ],
+    "stock_no_negative": [
+      "stock"
+    ],
+    "stock_override_procurement": [
+      "stock"
+    ],
+    "stock_owner_restriction": [
+      "stock"
+    ],
+    "stock_partner_delivery_window": [
+      "base_time_window",
+      "partner_tz",
+      "stock"
+    ],
+    "stock_picking_auto_create_lot": [
+      "stock"
+    ],
+    "stock_picking_auto_create_lot_sequence": [
+      "product_lot_sequence",
+      "stock_picking_auto_create_lot"
+    ],
+    "stock_picking_auto_create_package": [
+      "stock"
+    ],
+    "stock_picking_back2draft": [
+      "stock"
+    ],
+    "stock_picking_backorder_strategy_cancel": [
+      "stock"
+    ],
+    "stock_picking_batch_account": [
+      "stock_picking_batch",
+      "sale"
+    ],
+    "stock_picking_batch_account_sale_type": [
+      "stock_picking_batch_account",
+      "sale_order_type"
+    ],
+    "stock_picking_batch_creation": [
+      "delivery",
+      "stock_picking_batch",
+      "stock_picking_volume",
+      "stock_split_picking_dimension"
+    ],
+    "stock_picking_batch_creation_split_kit": [
+      "stock_picking_batch_creation",
+      "stock_split_picking_kit"
+    ],
+    "stock_picking_batch_extended": [
+      "stock_picking_batch",
+      "stock_delivery"
+    ],
+    "stock_picking_batch_invoice_frequency": [
+      "sale_stock",
+      "stock_picking_batch",
+      "sale_invoice_frequency"
+    ],
+    "stock_picking_batch_operation_quick_change": [
+      "stock_picking_batch"
+    ],
+    "stock_picking_batch_outgoing": [
+      "stock_move_propagate_first_move",
+      "stock_picking_batch"
+    ],
+    "stock_picking_batch_planner": [
+      "stock_picking_batch"
+    ],
+    "stock_picking_batch_print_invoices": [
+      "sale",
+      "stock_picking_batch_print_pickings"
+    ],
+    "stock_picking_batch_print_pickings": [
+      "stock_picking_batch"
+    ],
+    "stock_picking_batch_validate_confirm": [
+      "stock_picking_batch"
+    ],
+    "stock_picking_consolidation_priority": [
+      "stock",
+      "stock_warehouse_out_pull"
+    ],
+    "stock_picking_customer_ref": [
+      "sale_stock"
+    ],
+    "stock_picking_date_deadline_syncs_scheduled_date": [
+      "stock"
+    ],
+    "stock_picking_filter_lot": [
+      "stock"
+    ],
+    "stock_picking_group_by_base": [
+      "stock"
+    ],
+    "stock_picking_group_by_partner_by_carrier": [
+      "delivery_procurement_group_carrier",
+      "sale_stock",
+      "stock_delivery",
+      "stock_picking_group_by_base",
+      "stock_warehouse_out_pull"
+    ],
+    "stock_picking_group_by_partner_by_carrier_by_date": [
+      "partner_tz",
+      "stock_picking_group_by_partner_by_carrier"
+    ],
+    "stock_picking_group_by_partner_by_carrier_force_move_type": [
+      "stock_picking_type_force_move_type",
+      "stock_picking_group_by_partner_by_carrier"
+    ],
+    "stock_picking_immediate_transfer_warning": [
+      "stock"
+    ],
+    "stock_picking_import_serial_number": [
+      "stock"
+    ],
+    "stock_picking_invoice_link": [
+      "stock_account"
+    ],
+    "stock_picking_kind": [
+      "stock"
+    ],
+    "stock_picking_line_sequence": [
+      "stock",
+      "sale",
+      "sale_stock"
+    ],
+    "stock_picking_mass_action": [
+      "stock_account"
+    ],
+    "stock_picking_operation_quick_change": [
+      "stock"
+    ],
+    "stock_picking_origin_reference": [
+      "stock"
+    ],
+    "stock_picking_origin_reference_purchase": [
+      "stock_picking_origin_reference",
+      "purchase"
+    ],
+    "stock_picking_origin_reference_sale": [
+      "stock_picking_origin_reference",
+      "sale"
+    ],
+    "stock_picking_partner_note": [
+      "sale_stock"
+    ],
+    "stock_picking_partner_vat": [
+      "stock"
+    ],
+    "stock_picking_progress": [
+      "stock"
+    ],
+    "stock_picking_propagate_scheduled_date": [
+      "stock"
+    ],
+    "stock_picking_purchase_order_link": [
+      "purchase_stock"
+    ],
+    "stock_picking_restrict_cancel_printed": [
+      "stock"
+    ],
+    "stock_picking_restrict_cancel_with_orig_move": [
+      "stock"
+    ],
+    "stock_picking_restrict_partial_validation": [
+      "stock"
+    ],
+    "stock_picking_return_empty_package": [
+      "stock"
+    ],
+    "stock_picking_return_lot": [
+      "stock_restrict_lot",
+      "stock_picking_return_restricted_qty"
+    ],
+    "stock_picking_return_restricted_qty": [
+      "stock"
+    ],
+    "stock_picking_sale_order_link": [
+      "sale_stock"
+    ],
+    "stock_picking_send_by_mail": [
+      "stock",
+      "mail"
+    ],
+    "stock_picking_show_backorder": [
+      "stock"
+    ],
+    "stock_picking_show_lot": [
+      "stock"
+    ],
+    "stock_picking_show_return": [
+      "stock"
+    ],
+    "stock_picking_tier_validation": [
+      "stock",
+      "base_tier_validation"
+    ],
+    "stock_picking_to_batch_group_fields": [
+      "stock_picking_batch"
+    ],
+    "stock_picking_type_bypass_reservation": [
+      "stock"
+    ],
+    "stock_picking_type_force_move_type": [
+      "stock"
+    ],
+    "stock_picking_variable_qty": [
+      "sale_stock"
+    ],
+    "stock_picking_warn_message": [
+      "stock"
+    ],
+    "stock_picking_whole_scrap": [
+      "stock"
+    ],
+    "stock_product_set": [
+      "stock",
+      "product_set"
+    ],
+    "stock_production_lot_active": [
+      "stock"
+    ],
+    "stock_receipt_lot_info": [
+      "stock",
+      "product_expiry"
+    ],
+    "stock_reception_discrepancy_distribution": [
+      "sale_purchase_stock"
+    ],
+    "stock_reporting_access": [
+      "stock"
+    ],
+    "stock_restrict_lot": [
+      "stock"
+    ],
+    "stock_scrap_cancel": [
+      "stock"
+    ],
+    "stock_scrap_security": [
+      "stock"
+    ],
+    "stock_scrap_tier_validation": [
+      "stock",
+      "base_tier_validation"
+    ],
+    "stock_split_picking": [
+      "stock"
+    ],
+    "stock_split_picking_dimension": [
+      "stock_picking_volume",
+      "stock_split_picking"
+    ],
+    "stock_split_picking_kit": [
+      "stock_split_picking",
+      "mrp"
+    ],
+    "stock_valuation_layer_usage": [
+      "sale",
+      "stock_account_product_run_fifo_hook"
+    ],
+    "stock_warn_option": [
+      "stock",
+      "base_warn_option"
+    ],
+    "web_action_conditionable": [
+      "base",
+      "web"
+    ],
+    "web_calendar_slot_duration": [
+      "web"
+    ],
+    "web_chatter_position": [
+      "web",
+      "mail"
+    ],
+    "web_company_color": [
+      "web",
+      "base_sparse_field"
+    ],
+    "web_copy_confirm": [
+      "web"
+    ],
+    "web_dark_mode": [
+      "web"
+    ],
+    "web_datetime_picker_default_time": [
+      "web"
+    ],
+    "web_dialog_size": [
+      "web"
+    ],
+    "web_disable_export_group": [
+      "web"
+    ],
+    "web_editor_class_selector": [
+      "web_editor"
+    ],
+    "web_editor_disable_chatgpt": [
+      "web_editor"
+    ],
+    "web_environment_ribbon": [
+      "web"
+    ],
+    "web_excel_export_dynamic_expand": [
+      "web"
+    ],
+    "web_favicon": [
+      "web"
+    ],
+    "web_filter_header_button": [
+      "web"
+    ],
+    "web_font_size_report_layout": [
+      "web"
+    ],
+    "web_form_banner": [
+      "web"
+    ],
+    "web_group_expand": [
+      "web"
+    ],
+    "web_help": [
+      "web"
+    ],
+    "web_ir_actions_act_multi": [
+      "web"
+    ],
+    "web_ir_actions_act_window_message": [
+      "web"
+    ],
+    "web_m2x_options": [
+      "web"
+    ],
+    "web_m2x_options_manager": [
+      "base_view_inheritance_extension",
+      "web_m2x_options"
+    ],
+    "web_no_bubble": [
+      "web"
+    ],
+    "web_notify": [
+      "web",
+      "bus",
+      "base",
+      "mail"
+    ],
+    "web_notify_channel_message": [
+      "web_notify",
+      "mail"
+    ],
+    "web_notify_upgrade": [
+      "web_notify"
+    ],
+    "web_pivot_computed_measure": [
+      "web"
+    ],
+    "web_portal_properties": [
+      "portal"
+    ],
+    "web_pwa_customize": [
+      "web"
+    ],
+    "web_quick_start_screen": [
+      "web"
+    ],
+    "web_refresher": [
+      "web"
+    ],
+    "web_remember_tree_column_width": [
+      "web"
+    ],
+    "web_responsive": [
+      "web",
+      "web_tour",
+      "mail"
+    ],
+    "web_responsive_company_color": [
+      "web_company_color",
+      "web_responsive"
+    ],
+    "web_save_discard_button": [
+      "web"
+    ],
+    "web_search_with_and": [
+      "web"
+    ],
+    "web_send_message_popup": [
+      "web",
+      "mail"
+    ],
+    "web_session_auto_close": [
+      "web"
+    ],
+    "web_sort_menu": [
+      "web"
+    ],
+    "web_systray_button_init_action": [
+      "web"
+    ],
+    "web_theme_classic": [
+      "web"
+    ],
+    "web_time_range_menu_custom": [
+      "web"
+    ],
+    "web_timeline": [
+      "web"
+    ],
+    "web_toggle_chatter": [
+      "web"
+    ],
+    "web_touchscreen": [
+      "web"
+    ],
+    "web_tree_column_keyboard_resize": [
+      "web"
+    ],
+    "web_tree_dynamic_colored_field": [
+      "web"
+    ],
+    "web_tree_many2one_clickable": [
+      "web"
+    ],
+    "web_widget_bokeh_chart": [
+      "web"
+    ],
+    "web_widget_char_size": [
+      "web"
+    ],
+    "web_widget_domain_editor_dialog": [
+      "web"
+    ],
+    "web_widget_dropdown_dynamic": [
+      "web"
+    ],
+    "web_widget_image_download": [
+      "web"
+    ],
+    "web_widget_mpld3_chart": [
+      "web"
+    ],
+    "web_widget_numeric_step": [
+      "web"
+    ],
+    "web_widget_o2m_attachment_image_gallery": [
+      "web"
+    ],
+    "web_widget_one2many_tree_line_duplicate": [
+      "web"
+    ],
+    "web_widget_open_tab": [
+      "web"
+    ],
+    "web_widget_pattern": [
+      "web"
+    ],
+    "web_widget_popover": [
+      "web"
+    ],
+    "web_widget_product_label_section_and_note_full_label": [
+      "account",
+      "web"
+    ],
+    "web_widget_product_label_section_and_note_name_visibility": [
+      "web",
+      "account"
+    ],
+    "web_widget_url_advanced": [
+      "web"
+    ],
+    "web_widget_x2many_2d_matrix": [
+      "web"
+    ],
+    "clothing_factory_demo": [
+      "mrp",
+      "stock",
+      "ddmrp",
+      "web_responsive",
+      "web_timeline"
+    ],
+    "odoo_factory_all": [
+      "account_move_line_mrp_info",
+      "account_move_line_stock_info",
+      "attachment_delete_restrict",
+      "attachment_unindex_content",
+      "auditlog",
+      "autovacuum_message_attachment",
+      "base_conditional_image",
+      "base_cron_exclusion",
+      "base_exception",
+      "base_external_dbsource",
+      "base_external_system",
+      "base_fontawesome",
+      "base_fontawesome_web_editor",
+      "base_force_record_noupdate",
+      "base_global_discount",
+      "base_group_backend",
+      "base_ical",
+      "base_import_async",
+      "base_import_match",
+      "base_m2m_custom_field",
+      "base_model_restrict_update",
+      "base_multi_image",
+      "base_name_search_improved",
+      "base_partition",
+      "base_portal_type",
+      "base_remote",
+      "base_search_fuzzy",
+      "base_sparse_field_list_support",
+      "base_technical_user",
+      "base_temporary_action",
+      "base_time_parameter",
+      "base_time_window",
+      "base_user_effective_permissions",
+      "base_user_role",
+      "base_user_role_company",
+      "base_user_role_history",
+      "base_user_role_profile",
+      "base_view_inheritance_extension",
+      "bus_alt_connection",
+      "database_autovacuum_tuning",
+      "database_cleanup",
+      "database_size",
+      "dbfilter_from_header",
+      "ddmrp",
+      "ddmrp_chatter",
+      "ddmrp_coverage_days",
+      "ddmrp_cron_actions_as_job",
+      "ddmrp_exclude_moves_adu_calc",
+      "ddmrp_exclude_moves_adu_calc_sales",
+      "ddmrp_packaging",
+      "ddmrp_packaging_product_replace",
+      "ddmrp_product_replace",
+      "ddmrp_purchase_hide_onhand_status",
+      "ddmrp_report_part_flow_index",
+      "ddmrp_warning",
+      "ddmrp_warning_as_job",
+      "delivery_procurement_group_carrier",
+      "excel_import_export",
+      "fetchmail_attach_from_folder",
+      "fetchmail_notify_error_to_sender",
+      "html_text",
+      "iap_alternative_provider",
+      "jsonifier",
+      "mail_template_attachment_per_lang",
+      "module_auto_update",
+      "module_change_auto_install",
+      "mrp_attachment_mgmt",
+      "mrp_bom_assign_auto",
+      "mrp_bom_attribute_match",
+      "mrp_bom_component_menu",
+      "mrp_bom_hierarchy",
+      "mrp_bom_image",
+      "mrp_bom_line_formula_quantity",
+      "mrp_bom_line_uom_rounding",
+      "mrp_bom_location",
+      "mrp_bom_note",
+      "mrp_bom_select_product_variant",
+      "mrp_bom_tracking",
+      "mrp_bom_version",
+      "mrp_bom_warn_message_oca",
+      "mrp_bom_widget_section_and_note_one2many",
+      "mrp_byproduct_auto_create_lot",
+      "mrp_lot_number_propagation",
+      "mrp_mass_production_order",
+      "mrp_multi_level",
+      "mrp_multi_level_consume_safety_stock",
+      "mrp_multi_level_estimate",
+      "mrp_package_propagation",
+      "mrp_packaging_default",
+      "mrp_production_allow_recursive",
+      "mrp_production_auto_validate",
+      "mrp_production_back_to_draft",
+      "mrp_production_check_bom_alignment",
+      "mrp_production_date_planned_finished",
+      "mrp_production_location_picking_type",
+      "mrp_production_note",
+      "mrp_production_picking_type_from_route",
+      "mrp_production_putaway_strategy",
+      "mrp_propagate_lot_info",
+      "mrp_repair_order",
+      "mrp_restrict_lot",
+      "mrp_sale_info",
+      "mrp_stock_move_actual_date",
+      "mrp_stock_move_line_qty_picked",
+      "mrp_subcontracting_inhibit",
+      "mrp_subcontracting_purchase_link",
+      "mrp_subcontracting_skip_no_negative",
+      "mrp_tag",
+      "mrp_unbuild_move_link",
+      "mrp_unbuild_valuation_layer_link",
+      "mrp_warehouse_calendar",
+      "mrp_workcenter_scrap_reason",
+      "mrp_workorder_blocking_time",
+      "mrp_workorder_sequence",
+      "onchange_helper",
+      "procurement_auto_create_group",
+      "procurement_auto_create_group_carrier",
+      "product_cost_price_avco_sync",
+      "product_mrp_info",
+      "product_route_profile",
+      "product_route_profile_internal_resupply",
+      "purchase_stock_picking_invoice_link",
+      "purchase_stock_product_replenish_supplier",
+      "quality_control_mrp_oca",
+      "quality_control_oca",
+      "quality_control_stock_oca",
+      "queue_job",
+      "queue_job_batch",
+      "queue_job_cron",
+      "queue_job_cron_jobrunner",
+      "queue_job_profiler",
+      "queue_job_subscribe",
+      "rpc_helper",
+      "sale_line_returned_qty",
+      "sale_line_returned_qty_mrp",
+      "sale_mrp_bom_menu",
+      "sale_order_global_stock_route",
+      "sale_stock_picking_invoice_link",
+      "sale_stock_restocking_fee_invoicing",
+      "scheduler_error_mailer",
+      "scrap_reason_code",
+      "sequence_python",
+      "server_action_navigate",
+      "server_action_sort",
+      "session_db",
+      "stock_account_product_run_fifo_hook",
+      "stock_account_show_automatic_valuation",
+      "stock_archive_constraint",
+      "stock_available",
+      "stock_available_base_exclude_location",
+      "stock_available_immediately",
+      "stock_available_immediately_exclude_location",
+      "stock_available_location_get_domain",
+      "stock_available_unreserved",
+      "stock_buffer_capacity_limit",
+      "stock_buffer_route",
+      "stock_buffer_sales_analysis",
+      "stock_change_qty_reason",
+      "stock_checkout_sync",
+      "stock_cycle_count",
+      "stock_demand_estimate",
+      "stock_dynamic_routing",
+      "stock_dynamic_routing_checkout_sync",
+      "stock_dynamic_routing_delivery",
+      "stock_dynamic_routing_delivery_procurement_group_carrier",
+      "stock_free_quantity",
+      "stock_inventory",
+      "stock_inventory_count_to_zero",
+      "stock_inventory_discrepancy",
+      "stock_inventory_hide_apply_all",
+      "stock_inventory_location_state",
+      "stock_inventory_lockdown",
+      "stock_inventory_preparation_filter",
+      "stock_inventory_verification_request",
+      "stock_landed_costs_priority",
+      "stock_landed_costs_purchase_auto",
+      "stock_location_bin_name",
+      "stock_location_children",
+      "stock_location_empty",
+      "stock_location_fill_state",
+      "stock_location_fill_state_qty_picked",
+      "stock_location_is_sublocation",
+      "stock_location_lockdown",
+      "stock_location_orderpoint",
+      "stock_location_pending_move",
+      "stock_location_position",
+      "stock_location_tray",
+      "stock_location_zone",
+      "stock_lock_lot",
+      "stock_lot_catalog",
+      "stock_lot_catalog_condition",
+      "stock_lot_catalog_price",
+      "stock_lot_catalog_warehouse",
+      "stock_lot_condition",
+      "stock_lot_image",
+      "stock_lot_list_price",
+      "stock_lot_multi_image",
+      "stock_lot_scrap",
+      "stock_lot_warehouse",
+      "stock_move_actual_date",
+      "stock_move_backdating",
+      "stock_move_common_dest",
+      "stock_move_forced_lot",
+      "stock_move_line_change_lot",
+      "stock_move_line_dates",
+      "stock_move_line_expiration_date_required",
+      "stock_move_line_lot_link",
+      "stock_move_line_qty_picked",
+      "stock_move_line_reference_link",
+      "stock_move_location",
+      "stock_move_location_purchase_uom",
+      "stock_move_original_date",
+      "stock_move_packaging_qty",
+      "stock_move_propagate_first_move",
+      "stock_move_purchase_uom",
+      "stock_move_quantity_product_uom",
+      "stock_move_reset_quantity",
+      "stock_move_source_relocate",
+      "stock_move_source_relocate_dynamic_routing",
+      "stock_move_vendor_comment",
+      "stock_mts_mto_rule",
+      "stock_no_negative",
+      "stock_orderpoint_default_location",
+      "stock_orderpoint_generator",
+      "stock_orderpoint_manual_procurement",
+      "stock_orderpoint_move_link",
+      "stock_orderpoint_no_horizon",
+      "stock_orderpoint_purchase_link",
+      "stock_orderpoint_uom",
+      "stock_override_procurement",
+      "stock_owner_restriction",
+      "stock_package_type_volume",
+      "stock_picking_auto_create_lot",
+      "stock_picking_auto_create_package",
+      "stock_picking_back2draft",
+      "stock_picking_backorder_strategy_cancel",
+      "stock_picking_batch_account",
+      "stock_picking_batch_extended",
+      "stock_picking_batch_operation_quick_change",
+      "stock_picking_batch_outgoing",
+      "stock_picking_batch_packaging_qty",
+      "stock_picking_batch_planner",
+      "stock_picking_batch_print_invoices",
+      "stock_picking_batch_print_pickings",
+      "stock_picking_batch_validate_confirm",
+      "stock_picking_commercial_partner",
+      "stock_picking_completion_info",
+      "stock_picking_consolidation_priority",
+      "stock_picking_customer_ref",
+      "stock_picking_date_deadline_syncs_scheduled_date",
+      "stock_picking_filter_lot",
+      "stock_picking_group_by_base",
+      "stock_picking_group_by_partner_by_carrier",
+      "stock_picking_group_by_partner_by_carrier_force_move_type",
+      "stock_picking_immediate_transfer_warning",
+      "stock_picking_import_serial_number",
+      "stock_picking_invoice_link",
+      "stock_picking_kind",
+      "stock_picking_line_sequence",
+      "stock_picking_mass_action",
+      "stock_picking_operation_quick_change",
+      "stock_picking_origin_reference",
+      "stock_picking_origin_reference_purchase",
+      "stock_picking_origin_reference_sale",
+      "stock_picking_partner_note",
+      "stock_picking_partner_vat",
+      "stock_picking_procure_method",
+      "stock_picking_product_availability_inline",
+      "stock_picking_propagate_scheduled_date",
+      "stock_picking_purchase_order_link",
+      "stock_picking_restrict_cancel_printed",
+      "stock_picking_restrict_cancel_with_orig_move",
+      "stock_picking_restrict_partial_validation",
+      "stock_picking_return_empty_package",
+      "stock_picking_return_lot",
+      "stock_picking_return_restricted_qty",
+      "stock_picking_sale_order_link",
+      "stock_picking_send_by_mail",
+      "stock_picking_show_backorder",
+      "stock_picking_show_linked",
+      "stock_picking_show_lot",
+      "stock_picking_show_return",
+      "stock_picking_stage",
+      "stock_picking_supplier_ref",
+      "stock_picking_type_bypass_reservation",
+      "stock_picking_type_force_move_type",
+      "stock_picking_variable_qty",
+      "stock_picking_warn_message",
+      "stock_picking_whole_scrap",
+      "stock_production_lot_active",
+      "stock_putaway_product_template",
+      "stock_quant_cost_info",
+      "stock_quant_reservation_info",
+      "stock_quant_reservation_info_mrp",
+      "stock_receipt_lot_info",
+      "stock_reception_discrepancy_distribution",
+      "stock_removal_location_by_priority",
+      "stock_reporting_access",
+      "stock_restrict_immediate_adjustment",
+      "stock_restrict_lot",
+      "stock_route_location_source",
+      "stock_route_mto",
+      "stock_scrap_cancel",
+      "stock_scrap_security",
+      "stock_split_picking",
+      "stock_split_picking_kit",
+      "stock_storage_category_capacity_name",
+      "stock_valuation_layer_inventory_filter",
+      "stock_valuation_layer_usage",
+      "stock_vertical_lift",
+      "stock_vertical_lift_empty_tray_check",
+      "stock_vlm_mgmt",
+      "stock_vlm_mgmt_kardex",
+      "stock_vlm_mgmt_modula",
+      "stock_warehouse_calendar",
+      "stock_warehouse_out_pull",
+      "stock_warehouse_resupply_route_push",
+      "stock_warehouse_security",
+      "stock_whole_kit_constraint",
+      "test_auditlog",
+      "test_base_time_window",
+      "test_queue_job",
+      "test_queue_job_batch",
+      "tracking_manager",
+      "tracking_manager_domain",
+      "web_action_conditionable",
+      "web_calendar_slot_duration",
+      "web_chatter_position",
+      "web_company_color",
+      "web_copy_confirm",
+      "web_dark_mode",
+      "web_datetime_picker_default_time",
+      "web_dialog_size",
+      "web_disable_export_group",
+      "web_editor_class_selector",
+      "web_editor_disable_chatgpt",
+      "web_environment_ribbon",
+      "web_excel_export_dynamic_expand",
+      "web_favicon",
+      "web_filter_header_button",
+      "web_font_size_report_layout",
+      "web_form_banner",
+      "web_group_expand",
+      "web_help",
+      "web_ir_actions_act_multi",
+      "web_ir_actions_act_window_message",
+      "web_m2x_options",
+      "web_m2x_options_manager",
+      "web_no_bubble",
+      "web_notify",
+      "web_notify_channel_message",
+      "web_notify_upgrade",
+      "web_pivot_computed_measure",
+      "web_portal_properties",
+      "web_pwa_customize",
+      "web_quick_start_screen",
+      "web_refresher",
+      "web_remember_tree_column_width",
+      "web_responsive",
+      "web_responsive_company_color",
+      "web_save_discard_button",
+      "web_search_with_and",
+      "web_send_message_popup",
+      "web_session_auto_close",
+      "web_sort_menu",
+      "web_systray_button_init_action",
+      "web_theme_classic",
+      "web_time_range_menu_custom",
+      "web_timeline",
+      "web_toggle_chatter",
+      "web_touchscreen",
+      "web_tree_column_keyboard_resize",
+      "web_tree_dynamic_colored_field",
+      "web_tree_many2one_clickable",
+      "web_widget_char_size",
+      "web_widget_domain_editor_dialog",
+      "web_widget_dropdown_dynamic",
+      "web_widget_image_download",
+      "web_widget_numeric_step",
+      "web_widget_o2m_attachment_image_gallery",
+      "web_widget_one2many_tree_line_duplicate",
+      "web_widget_open_tab",
+      "web_widget_pattern",
+      "web_widget_popover",
+      "web_widget_product_label_section_and_note_full_label",
+      "web_widget_product_label_section_and_note_name_visibility",
+      "web_widget_url_advanced",
+      "web_widget_x2many_2d_matrix"
+    ]
+  },
+  "cycles": [],
+  "has_cycles": false,
+  "missing_dependencies": {
+    "ddmrp_adjustment": [
+      "date_range"
+    ],
+    "stock_buffer_sales_analysis": [
+      "sales_team"
+    ],
+    "mrp_lot_production_date": [
+      "stock_lot_production_date"
+    ],
+    "mrp_repair_order": [
+      "repair"
+    ],
+    "mrp_sale_info": [
+      "sale_mrp"
+    ],
+    "mrp_unbuild_move_link": [
+      "mrp_account"
+    ],
+    "mrp_unbuild_valuation_layer_link": [
+      "mrp_account"
+    ],
+    "printing_auto_mrp": [
+      "printing_auto_stock_picking"
+    ],
+    "base_import_async": [
+      "base_import"
+    ],
+    "queue_job": [
+      "base_sparse_field"
+    ],
+    "base_import_match": [
+      "base_import"
+    ],
+    "server_action_navigate": [
+      "base_automation"
+    ],
+    "attachment_delete_restrict": [
+      "base_setup"
+    ],
+    "attachment_synchronize": [
+      "fs_storage"
+    ],
+    "base_exception": [
+      "base_setup"
+    ],
+    "base_model_restrict_update": [
+      "base_setup"
+    ],
+    "base_sparse_field_list_support": [
+      "base_sparse_field"
+    ],
+    "database_autovacuum_tuning": [
+      "base_setup"
+    ],
+    "database_size": [
+      "base_setup"
+    ],
+    "mail_cleanup": [
+      "mail_environment"
+    ],
+    "rpc_helper": [
+      "base_sparse_field"
+    ],
+    "stock_orderpoint_mto_as_mts": [
+      "product_route_mto"
+    ],
+    "stock_demand_estimate_matrix": [
+      "date_range"
+    ],
+    "stock_location_tray": [
+      "base_sparse_field"
+    ],
+    "stock_lot_catalog_sale": [
+      "sale_order_lot_selection"
+    ],
+    "stock_packaging_calculator": [
+      "product_packaging_calculator"
+    ],
+    "stock_picking_batch_packaging_qty": [
+      "stock_picking_batch"
+    ],
+    "stock_picking_product_assortment": [
+      "product_assortment"
+    ],
+    "stock_picking_volume": [
+      "product_dimension"
+    ],
+    "stock_picking_volume_packaging": [
+      "product_packaging_dimension"
+    ],
+    "stock_product_qty_by_packaging": [
+      "product_packaging_calculator"
+    ],
+    "stock_secondary_unit": [
+      "product_secondary_unit"
+    ],
+    "stock_vertical_lift": [
+      "base_sparse_field"
+    ],
+    "stock_vertical_lift_packaging_level": [
+      "product_packaging_level"
+    ],
+    "stock_vertical_lift_server_env": [
+      "server_environment"
+    ],
+    "stock_vertical_lift_storage_type": [
+      "stock_storage_type"
+    ],
+    "stock_vlm_mgmt": [
+      "base_sparse_field"
+    ],
+    "delivery_procurement_group_carrier": [
+      "stock_delivery"
+    ],
+    "delivery_total_weight_from_packaging": [
+      "stock_delivery",
+      "product_total_weight_from_packaging"
+    ],
+    "product_customerinfo_picking": [
+      "product_customerinfo"
+    ],
+    "stock_dangerous_goods": [
+      "l10n_eu_product_adr_dangerous_goods"
+    ],
+    "stock_dynamic_routing_delivery": [
+      "stock_delivery"
+    ],
+    "stock_dynamic_routing_reserve_rule": [
+      "stock_reserve_rule"
+    ],
+    "stock_landed_costs_priority": [
+      "stock_landed_costs"
+    ],
+    "stock_landed_costs_purchase_auto": [
+      "stock_landed_costs"
+    ],
+    "stock_move_auto_assign_auto_release": [
+      "stock_available_to_promise_release",
+      "stock_move_auto_assign"
+    ],
+    "stock_move_line_expiration_date_required": [
+      "product_expiry"
+    ],
+    "stock_partner_delivery_window": [
+      "partner_tz"
+    ],
+    "stock_picking_auto_create_lot_sequence": [
+      "product_lot_sequence"
+    ],
+    "stock_picking_batch_account": [
+      "stock_picking_batch"
+    ],
+    "stock_picking_batch_account_sale_type": [
+      "sale_order_type"
+    ],
+    "stock_picking_batch_creation": [
+      "delivery",
+      "stock_picking_batch"
+    ],
+    "stock_picking_batch_extended": [
+      "stock_picking_batch",
+      "stock_delivery"
+    ],
+    "stock_picking_batch_invoice_frequency": [
+      "stock_picking_batch",
+      "sale_invoice_frequency"
+    ],
+    "stock_picking_batch_operation_quick_change": [
+      "stock_picking_batch"
+    ],
+    "stock_picking_batch_outgoing": [
+      "stock_picking_batch"
+    ],
+    "stock_picking_batch_planner": [
+      "stock_picking_batch"
+    ],
+    "stock_picking_batch_print_pickings": [
+      "stock_picking_batch"
+    ],
+    "stock_picking_batch_validate_confirm": [
+      "stock_picking_batch"
+    ],
+    "stock_picking_group_by_partner_by_carrier": [
+      "stock_delivery"
+    ],
+    "stock_picking_group_by_partner_by_carrier_by_date": [
+      "partner_tz"
+    ],
+    "stock_picking_tier_validation": [
+      "base_tier_validation"
+    ],
+    "stock_picking_to_batch_group_fields": [
+      "stock_picking_batch"
+    ],
+    "stock_product_set": [
+      "product_set"
+    ],
+    "stock_receipt_lot_info": [
+      "product_expiry"
+    ],
+    "stock_reception_discrepancy_distribution": [
+      "sale_purchase_stock"
+    ],
+    "stock_scrap_tier_validation": [
+      "base_tier_validation"
+    ],
+    "stock_warn_option": [
+      "base_warn_option"
+    ],
+    "web_company_color": [
+      "base_sparse_field"
+    ]
+  },
+  "total_modules": 442,
+  "total_edges": 1006
+}
