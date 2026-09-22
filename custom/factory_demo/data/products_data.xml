@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Categories -->
+        <record id="product_category_raw" model="product.category">
+            <field name="name">Raw Materials</field>
+            <field name="parent_id" ref="product.product_category_all"/>
+        </record>
+
+        <record id="product_category_components" model="product.category">
+            <field name="name">Subassemblies &amp; Components</field>
+            <field name="parent_id" ref="product.product_category_all"/>
+        </record>
+
+        <record id="product_category_packaging" model="product.category">
+            <field name="name">Packaging</field>
+            <field name="parent_id" ref="product.product_category_all"/>
+        </record>
+
+        <record id="product_category_finished" model="product.category">
+            <field name="name">Finished Goods</field>
+            <field name="parent_id" ref="product.product_category_all"/>
+        </record>
+
+        <!-- RM-001: Steel Sheet 2mm -->
+        <record id="product_rm_001" model="product.product">
+            <field name="name">RM-001 Industrial Steel Sheet 2mm</field>
+            <field name="default_code">RM-001</field>
+            <field name="categ_id" ref="product_category_raw"/>
+            <field name="type">consu</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price">45.0</field>
+            <field name="list_price">60.0</field>
+            <field name="purchase_ok" eval="True"/>
+            <field name="sale_ok" eval="False"/>
+        </record>
+
+        <!-- RM-002: Fastener M8 -->
+        <record id="product_rm_002" model="product.product">
+            <field name="name">RM-002 High-Tensile Fastener M8</field>
+            <field name="default_code">RM-002</field>
+            <field name="categ_id" ref="product_category_raw"/>
+            <field name="type">consu</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price">1.5</field>
+            <field name="list_price">2.5</field>
+            <field name="purchase_ok" eval="True"/>
+            <field name="sale_ok" eval="False"/>
+        </record>
+
+        <!-- RM-003: Industrial Coating Resin -->
+        <record id="product_rm_003" model="product.product">
+            <field name="name">RM-003 Industrial Protective Coating</field>
+            <field name="default_code">RM-003</field>
+            <field name="categ_id" ref="product_category_raw"/>
+            <field name="type">consu</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price">12.0</field>
+            <field name="list_price">18.0</field>
+            <field name="purchase_ok" eval="True"/>
+            <field name="sale_ok" eval="False"/>
+        </record>
+
+        <!-- COMP-001: Pre-Cut Bracket Assembly -->
+        <record id="product_comp_001" model="product.product">
+            <field name="name">COMP-001 Precision Bracket Subassembly</field>
+            <field name="default_code">COMP-001</field>
+            <field name="categ_id" ref="product_category_components"/>
+            <field name="type">consu</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price">75.0</field>
+            <field name="list_price">110.0</field>
+            <field name="purchase_ok" eval="False"/>
+            <field name="sale_ok" eval="False"/>
+        </record>
+
+        <!-- PKG-001: Reinforced Packaging Box -->
+        <record id="product_pkg_001" model="product.product">
+            <field name="name">PKG-001 Reinforced Industrial Crate</field>
+            <field name="default_code">PKG-001</field>
+            <field name="categ_id" ref="product_category_packaging"/>
+            <field name="type">consu</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price">8.0</field>
+            <field name="list_price">12.0</field>
+            <field name="purchase_ok" eval="True"/>
+            <field name="sale_ok" eval="False"/>
+        </record>
+
+        <!-- FG-001: Universal Industrial Assembly -->
+        <record id="product_fg_001" model="product.product">
+            <field name="name">FG-001 Universal Industrial Unit A100</field>
+            <field name="default_code">FG-001</field>
+            <field name="categ_id" ref="product_category_finished"/>
+            <field name="type">consu</field>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
+            <field name="standard_price">180.0</field>
+            <field name="list_price">350.0</field>
+            <field name="purchase_ok" eval="False"/>
+            <field name="sale_ok" eval="True"/>
+        </record>
+    </data>
+</odoo>

@@ -442,6 +442,7 @@
     "web_widget_x2many_2d_matrix",
     "clothing_factory_demo",
     "factory_base",
+    "factory_demo",
     "factory_profile_advanced",
     "factory_profile_core",
     "factory_profile_full",
@@ -1952,6 +1953,14 @@
       "base",
       "mail"
     ],
+    "factory_demo": [
+      "product",
+      "stock",
+      "mrp",
+      "purchase",
+      "sale_management",
+      "factory_base"
+    ],
     "factory_profile_advanced": [
       "account",
       "ddmrp",
@@ -2617,6 +2626,6 @@
       "base_sparse_field"
     ]
   },
-  "total_modules": 447,
-  "total_edges": 1058
+  "total_modules": 448,
+  "total_edges": 1064
 }
