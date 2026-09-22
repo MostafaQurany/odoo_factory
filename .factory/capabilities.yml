@@ -7,6 +7,7 @@ capabilities:
     modules:
       required:
         - sale_management
+        - factory_sale
       optional:
         - sale_stock
     conflicts: []
@@ -28,6 +29,7 @@ capabilities:
     modules:
       required:
         - purchase
+        - factory_purchase
       optional:
         - purchase_stock
     conflicts: []
@@ -49,8 +51,12 @@ capabilities:
     modules:
       required:
         - stock
+        - factory_inventory
       optional:
         - stock_account
+        - stock_no_negative
+        - stock_available
+        - stock_free_quantity
     conflicts: []
     profiles:
       - core
@@ -74,6 +80,7 @@ capabilities:
     modules:
       required:
         - mrp
+        - factory_mrp
       optional:
         - mrp_workorder_sequence
     conflicts: []
@@ -97,6 +104,7 @@ capabilities:
     modules:
       required:
         - account
+        - factory_accounting
       optional:
         - account_payment
     conflicts: []
@@ -118,6 +126,7 @@ capabilities:
     modules:
       required:
         - factory_base
+        - factory_security
       optional: []
     conflicts: []
     profiles:
@@ -141,6 +150,7 @@ capabilities:
       required:
         - quality_control_oca
         - quality_control_mrp_oca
+        - factory_quality
       optional:
         - quality_control_stock_oca
     conflicts: []

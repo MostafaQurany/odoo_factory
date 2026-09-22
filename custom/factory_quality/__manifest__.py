@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+{
+    'name': 'Factory Quality & Controlled Rework Engine',
+    'version': '18.0.1.0.0',
+    'category': 'Manufacturing/Quality',
+    'summary': 'Industrial 4-gate quality inspection, controlled rework orders, and scrap attribution',
+    'author': 'Odoo Factory Platform',
+    'license': 'LGPL-3',
+    'depends': [
+        'base',
+        'stock',
+        'mrp',
+        'quality_control_oca',
+        'quality_control_mrp_oca',
+        'scrap_reason_code',
+        'mrp_workcenter_scrap_reason',
+        'factory_base',
+        'factory_inventory',
+        'factory_mrp',
+    ],
+    'data': [
+        'security/ir.model.access.csv',
+        'views/qc_inspection_views.xml',
+        'views/factory_rework_order_views.xml',
+        'views/stock_scrap_views.xml',
+        'views/factory_quality_menus.xml',
+    ],
+    'installable': True,
+    'application': False,
+    'auto_install': False,
+}

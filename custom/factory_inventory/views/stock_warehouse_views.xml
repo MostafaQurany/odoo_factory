@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_warehouse_form_inherit_factory" model="ir.ui.view">
+        <field name="name">stock.warehouse.form.inherit.factory</field>
+        <field name="model">stock.warehouse</field>
+        <field name="inherit_id" ref="stock.view_warehouse"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="before">
+                <header>
+                    <button name="action_create_factory_locations" string="Initialize Factory Locations" type="object" class="oe_highlight"/>
+                </header>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Factory Industrial Locations" name="factory_locations">
+                    <group>
+                        <group string="Material Inbound &amp; QA">
+                            <field name="loc_input_id" readonly="1"/>
+                            <field name="loc_quality_hold_id" readonly="1"/>
+                        </group>
+                        <group string="Storage &amp; Production">
+                            <field name="loc_raw_materials_id" readonly="1"/>
+                            <field name="loc_components_id" readonly="1"/>
+                            <field name="loc_wip_id" readonly="1"/>
+                            <field name="loc_finished_goods_id" readonly="1"/>
+                            <field name="loc_packaging_id" readonly="1"/>
+                        </group>
+                        <group string="Exceptions &amp; Maintenance">
+                            <field name="loc_returns_id" readonly="1"/>
+                            <field name="loc_scrap_id" readonly="1"/>
+                            <field name="loc_spare_parts_id" readonly="1"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

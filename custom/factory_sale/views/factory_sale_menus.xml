@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Sales submenus under Factory Operations -->
+    <menuitem id="menu_factory_sales_orders"
+              name="Factory Sales Demand"
+              parent="factory_base.menu_factory_operations"
+              action="sale.action_orders"
+              sequence="35"/>
+</odoo>

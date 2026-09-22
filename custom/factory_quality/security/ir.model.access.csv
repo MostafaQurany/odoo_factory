@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_qc_inspection_factory_user,qc.inspection.factory.user,quality_control_oca.model_qc_inspection,factory_base.group_factory_user,1,0,0,0
+access_qc_inspection_factory_quality,qc.inspection.factory.quality,quality_control_oca.model_qc_inspection,factory_base.group_factory_quality,1,1,1,0
+access_qc_inspection_factory_manager,qc.inspection.factory.manager,quality_control_oca.model_qc_inspection,factory_base.group_factory_manager,1,1,1,1
+access_factory_rework_order_user,factory.rework.order.user,model_factory_rework_order,factory_base.group_factory_user,1,1,0,0
+access_factory_rework_order_quality,factory.rework.order.quality,model_factory_rework_order,factory_base.group_factory_quality,1,1,1,0
+access_factory_rework_order_manager,factory.rework.order.manager,model_factory_rework_order,factory_base.group_factory_manager,1,1,1,1
+access_stock_scrap_factory_user,stock.scrap.factory.user,stock.model_stock_scrap,factory_base.group_factory_user,1,1,1,0
+access_stock_scrap_factory_manager,stock.scrap.factory.manager,stock.model_stock_scrap,factory_base.group_factory_manager,1,1,1,1

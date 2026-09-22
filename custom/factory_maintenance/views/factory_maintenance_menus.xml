@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Maintenance submenus under Factory Operations -->
+    <menuitem id="menu_factory_maintenance_root"
+              name="Plant Maintenance"
+              parent="factory_base.menu_factory_operations"
+              sequence="40"/>
+
+    <menuitem id="menu_factory_maintenance_requests"
+              name="Maintenance Requests"
+              parent="menu_factory_maintenance_root"
+              action="action_factory_maintenance_request"
+              sequence="10"/>
+
+    <menuitem id="menu_factory_maintenance_equipment"
+              name="Plant Machinery"
+              parent="menu_factory_maintenance_root"
+              action="action_factory_equipment"
+              sequence="20"/>
+</odoo>

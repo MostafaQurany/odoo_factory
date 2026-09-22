@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- Demo Vendors -->
+    <record id="partner_demo_supplier_steel" model="res.partner">
+        <field name="name">Apex Industrial Metals LLC</field>
+        <field name="supplier_rank">1</field>
+        <field name="is_company">True</field>
+        <field name="street">Industrial Zone 3, 10th of Ramadan</field>
+        <field name="city">Cairo</field>
+        <field name="country_id" ref="base.eg"/>
+        <field name="email">sales@apexmetals-demo.com</field>
+    </record>
+
+    <record id="partner_demo_supplier_components" model="res.partner">
+        <field name="name">Delta Precision Fasteners &amp; Seals</field>
+        <field name="supplier_rank">1</field>
+        <field name="is_company">True</field>
+        <field name="street">Borg El Arab Industrial Area</field>
+        <field name="city">Alexandria</field>
+        <field name="country_id" ref="base.eg"/>
+        <field name="email">orders@deltafasteners-demo.com</field>
+    </record>
+
+    <!-- Demo Customers -->
+    <record id="partner_demo_customer_oem" model="res.partner">
+        <field name="name">Nile Machinery Manufacturing Corp</field>
+        <field name="customer_rank">1</field>
+        <field name="is_company">True</field>
+        <field name="street">6th of October City, Sector 2</field>
+        <field name="city">Giza</field>
+        <field name="country_id" ref="base.eg"/>
+        <field name="email">procurement@nilemachinery-demo.com</field>
+    </record>
+
+    <record id="partner_demo_customer_distributor" model="res.partner">
+        <field name="name">Middle East Industrial Supplies &amp; Spares</field>
+        <field name="customer_rank">1</field>
+        <field name="is_company">True</field>
+        <field name="street">El Nasr St, Nasr City</field>
+        <field name="city">Cairo</field>
+        <field name="country_id" ref="base.eg"/>
+        <field name="email">purchasing@me-supplies-demo.com</field>
+    </record>
+</odoo>

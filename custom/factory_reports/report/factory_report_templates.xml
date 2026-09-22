@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Template 1: MO Card -->
+    <template id="report_mrp_order_card_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Manufacturing Order Traveler: <span t-field="doc.name"/></h2>
+                        <div class="row mt32 mb32">
+                            <div class="col-4"><strong>Product:</strong> <span t-field="doc.product_id.display_name"/></div>
+                            <div class="col-4"><strong>Quantity:</strong> <span t-field="doc.product_qty"/> <span t-field="doc.product_uom_id.name"/></div>
+                            <div class="col-4"><strong>Shift:</strong> <span t-field="doc.production_shift"/></div>
+                        </div>
+                        <h3>Bill of Materials Components</h3>
+                        <table class="table table-sm table-striped">
+                            <thead>
+                                <tr><th>Component</th><th>To Consume</th><th>Consumed</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="doc.move_raw_ids" t-as="raw">
+                                    <td><span t-field="raw.product_id.display_name"/></td>
+                                    <td><span t-field="raw.product_uom_qty"/></td>
+                                    <td><span t-field="raw.quantity"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <!-- Template 2: BOM Sheet -->
+    <template id="report_mrp_bom_sheet_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>BOM Material Requirement Sheet: <span t-field="doc.display_name"/></h2>
+                        <p><strong>Revision:</strong> <span t-field="doc.bom_revision"/></p>
+                        <table class="table table-sm">
+                            <thead><tr><th>Item</th><th>Quantity</th></tr></thead>
+                            <tbody>
+                                <tr t-foreach="doc.bom_line_ids" t-as="line">
+                                    <td><span t-field="line.product_id.display_name"/></td>
+                                    <td><span t-field="line.product_qty"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <!-- Template 3: Pick List -->
+    <template id="report_production_pick_list_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Shop Floor Pick List: <span t-field="doc.name"/></h2>
+                        <table class="table table-sm">
+                            <thead><tr><th>Component</th><th>Location</th><th>Qty</th></tr></thead>
+                            <tbody>
+                                <tr t-foreach="doc.move_raw_ids" t-as="m">
+                                    <td><span t-field="m.product_id.name"/></td>
+                                    <td><span t-field="m.location_id.display_name"/></td>
+                                    <td><span t-field="m.product_uom_qty"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <!-- Template 4: Material Consumption -->
+    <template id="report_material_consumption_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Material Consumption Audit: <span t-field="doc.name"/></h2>
+                        <p><strong>Variance %:</strong> <span t-field="doc.actual_vs_planned_material_pct"/></p>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <!-- Template 5: Finished Production -->
+    <template id="report_finished_production_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Finished Product Receipt: <span t-field="doc.name"/></h2>
+                        <p><strong>Produced:</strong> <span t-field="doc.qty_produced"/> <span t-field="doc.product_id.name"/></p>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <!-- Template 6: Scrap Report -->
+    <template id="report_stock_scrap_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Scrap Disposition Certificate: <span t-field="doc.name"/></h2>
+                        <p><strong>Product:</strong> <span t-field="doc.product_id.name"/></p>
+                        <p><strong>Quantity:</strong> <span t-field="doc.scrap_qty"/></p>
+                        <p><strong>Estimated Loss:</strong> <span t-field="doc.scrap_cost_loss"/></p>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <!-- Template 7: Rework Report -->
+    <template id="report_rework_order_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Controlled Rework Traveler: <span t-field="doc.name"/></h2>
+                        <p><strong>Defective Item:</strong> <span t-field="doc.product_id.name"/></p>
+                        <p><strong>Instructions:</strong> <span t-field="doc.rework_instructions"/></p>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <!-- Template 8: Quality Inspection -->
+    <template id="report_qc_inspection_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Quality Inspection Certificate: <span t-field="doc.name"/></h2>
+                        <p><strong>Gate:</strong> <span t-field="doc.quality_gate"/></p>
+                        <p><strong>Disposition:</strong> <span t-field="doc.factory_disposition"/></p>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <!-- Template 9: Lot Traceability -->
+    <template id="report_lot_traceability_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Lot Traceability Record: <span t-field="doc.name"/></h2>
+                        <p><strong>Product:</strong> <span t-field="doc.product_id.name"/></p>
+                        <p><strong>Supplier:</strong> <span t-field="doc.supplier_id.name"/></p>
+                        <p><strong>Vendor Lot:</strong> <span t-field="doc.vendor_lot_number"/></p>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <!-- Template 10: Stock Availability -->
+    <template id="report_stock_availability_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Warehouse Stock Statement: <span t-field="doc.name"/></h2>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <!-- Template 11: Inventory Valuation -->
+    <template id="report_inventory_valuation_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Inventory Valuation Statement: <span t-field="doc.display_name"/></h2>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <!-- Template 12: Purchase Incoming -->
+    <template id="report_purchase_incoming_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Purchase Material Receiving Slip: <span t-field="doc.name"/></h2>
+                        <p><strong>Vendor:</strong> <span t-field="doc.partner_id.name"/></p>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <!-- Template 13: Supplier Performance -->
+    <template id="report_supplier_performance_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Supplier Quality &amp; Delivery Scorecard: <span t-field="doc.name"/></h2>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <!-- Template 14: Production Costing -->
+    <template id="report_production_costing_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Production Cost Analysis: <span t-field="doc.name"/></h2>
+                        <p><strong>Total Cost:</strong> <span t-field="doc.cost_manufacturing_total"/></p>
+                        <p><strong>Unit Cost:</strong> <span t-field="doc.unit_cost_manufactured"/></p>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <!-- Template 15: Manufacturing Variance -->
+    <template id="report_manufacturing_variance_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Planned vs Actual Variance: <span t-field="doc.name"/></h2>
+                        <p><strong>Material Variance:</strong> <span t-field="doc.actual_vs_planned_material_pct"/>%</p>
+                        <p><strong>Duration Variance:</strong> <span t-field="doc.actual_vs_planned_duration_pct"/>%</p>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <!-- Template 16: Delivery Slip -->
+    <template id="report_factory_delivery_slip_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>Factory Dispatch Slip: <span t-field="doc.name"/></h2>
+                        <p><strong>Customer:</strong> <span t-field="doc.partner_id.name"/></p>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Accounting submenus under Factory Operations -->
+    <menuitem id="menu_factory_accounting_invoices"
+              name="Factory Invoices &amp; Bills"
+              parent="factory_base.menu_factory_operations"
+              action="account.action_move_out_invoice_type"
+              sequence="50"/>
+</odoo>

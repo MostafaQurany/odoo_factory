@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Quality submenus under Factory Operations -> Quality Control -->
+    <menuitem id="menu_factory_qc_inspections"
+              name="Quality Inspections"
+              parent="factory_base.menu_factory_quality"
+              action="quality_control_oca.action_qc_inspection"
+              sequence="10"/>
+
+    <menuitem id="menu_factory_qc_rework"
+              name="Controlled Rework Orders"
+              parent="factory_base.menu_factory_quality"
+              action="action_factory_rework_order"
+              sequence="20"/>
+
+    <menuitem id="menu_factory_qc_scrap"
+              name="Scrap Attribution"
+              parent="factory_base.menu_factory_quality"
+              action="stock.action_stock_scrap"
+              sequence="30"/>
+</odoo>

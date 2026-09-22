@@ -89,6 +89,54 @@ module_overrides:
     classification: ADVANCED
     reason: "Manual procurement trigger on automated orderpoints"
     status: approved
+  factory_inventory:
+    classification: CORE
+    reason: "Factory warehouse structure, location topologies, and inventory controls"
+    status: approved
+  factory_purchase:
+    classification: CORE
+    reason: "Factory procurement, supplier lead times, and PO approval tiers"
+    status: approved
+  factory_mrp:
+    classification: CORE
+    reason: "Factory manufacturing extensions, work center costing, and consumption audit"
+    status: approved
+  factory_quality:
+    classification: OPERATIONS
+    reason: "Factory quality gates (incoming, in-process, finished goods, returns) and rework loop"
+    status: approved
+  factory_sale:
+    classification: CORE
+    reason: "Factory demand management, finished goods availability, and MTO/MTS trace"
+    status: approved
+  factory_accounting:
+    classification: CORE
+    reason: "Factory cost accounting, perpetual inventory valuation, and Egyptian localization"
+    status: approved
+  factory_security:
+    classification: CORE
+    reason: "Industrial role-based security (12 personas), approval tiers, and ACLs"
+    status: approved
+  factory_reports:
+    classification: CORE
+    reason: "16 standard industrial production QWeb PDF reports"
+    status: approved
+  factory_maintenance:
+    classification: OPERATIONS
+    reason: "Preventive and corrective maintenance linked to work centers and downtime"
+    status: approved
+  stock_no_negative:
+    classification: CORE
+    reason: "Enforce strict positive inventory balance policy in manufacturing"
+    status: approved
+  stock_available:
+    classification: CORE
+    reason: "Detailed available and unreserved quantity computation"
+    status: approved
+  stock_free_quantity:
+    classification: CORE
+    reason: "Free quantity semantics for stock allocations"
+    status: approved
   clothing_factory_demo:
     classification: LEGACY
     reason: "Relocated apparel vertical demo data (deprecated for baseline)"
@@ -97,3 +145,4 @@ module_overrides:
     classification: LEGACY
     reason: "Monolithic legacy meta-package (replaced by factory_profile_*)"
     status: legacy
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Purchasing submenus under Factory Operations -->
+    <menuitem id="menu_factory_purchase_orders"
+              name="Factory Procurement"
+              parent="factory_base.menu_factory_operations"
+              action="purchase.purchase_form_action"
+              sequence="20"/>
+
+    <menuitem id="menu_factory_purchase_to_approve"
+              name="PO Awaiting Approval"
+              parent="factory_base.menu_factory_operations"
+              action="purchase.purchase_form_action"
+              sequence="21"
+              groups="factory_base.group_factory_manager"/>
+</odoo>

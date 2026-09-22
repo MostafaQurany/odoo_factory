@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_production_lot_form_inherit_factory" model="ir.ui.view">
+        <field name="name">stock.lot.form.inherit.factory</field>
+        <field name="model">stock.lot</field>
+        <field name="inherit_id" ref="stock.view_production_lot_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='main_group']" position="after">
+                <group string="Factory Traceability &amp; Origin">
+                    <group>
+                        <field name="supplier_id"/>
+                        <field name="vendor_lot_number"/>
+                    </group>
+                    <group>
+                        <field name="manufacturing_date"/>
+                        <field name="inspection_certificate"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

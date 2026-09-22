@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_company_form_inherit_factory_accounting" model="ir.ui.view">
+        <field name="name">res.company.form.inherit.factory.accounting</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="before">
+                <header>
+                    <button name="action_configure_egyptian_defaults" string="Apply Egypt Localization" type="object" class="btn-info" invisible="not factory_enable_egp_localization"/>
+                </header>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Factory Localization" name="factory_localization">
+                    <group>
+                        <field name="factory_enable_egp_localization"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

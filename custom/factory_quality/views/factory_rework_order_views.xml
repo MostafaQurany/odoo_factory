@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_factory_rework_order_tree" model="ir.ui.view">
+        <field name="name">factory.rework.order.list</field>
+        <field name="model">factory.rework.order</field>
+        <field name="arch" type="xml">
+            <list string="Rework Orders" decoration-info="state == 'draft'" decoration-warning="state == 'in_progress'" decoration-success="state == 'done'" decoration-danger="state == 'scrapped'">
+                <field name="name"/>
+                <field name="product_id"/>
+                <field name="lot_id"/>
+                <field name="rework_qty"/>
+                <field name="workcenter_id"/>
+                <field name="operator_id"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_factory_rework_order_form" model="ir.ui.view">
+        <field name="name">factory.rework.order.form</field>
+        <field name="model">factory.rework.order</field>
+        <field name="arch" type="xml">
+            <form string="Rework Order">
+                <header>
+                    <button name="action_start_rework" string="Start Rework" type="object" class="btn-primary" invisible="state != 'draft'"/>
+                    <button name="action_complete_for_reinspection" string="Submit for Re-inspection" type="object" class="btn-warning" invisible="state != 'in_progress'"/>
+                    <button name="action_rework_passed" string="Rework Passed" type="object" class="btn-success" invisible="state != 'reinspected'" groups="factory_base.group_factory_quality,factory_base.group_factory_manager"/>
+                    <button name="action_rework_failed_scrap" string="Scrap Unrecoverable" type="object" class="btn-danger" invisible="state not in ('in_progress', 'reinspected')" groups="factory_base.group_factory_quality,factory_base.group_factory_manager"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,in_progress,reinspected,done"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" readonly="1"/></h1>
+                    </div>
+                    <group>
+                        <group string="Source &amp; Defect">
+                            <field name="product_id"/>
+                            <field name="lot_id"/>
+                            <field name="rework_qty"/>
+                            <field name="origin_inspection_id" readonly="1"/>
+                        </group>
+                        <group string="Correction &amp; Execution">
+                            <field name="workcenter_id"/>
+                            <field name="operator_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Instructions &amp; Cause" name="instructions">
+                            <group>
+                                <field name="rework_instructions"/>
+                                <field name="defect_root_cause"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_factory_rework_order" model="ir.actions.act_window">
+        <field name="name">Rework Orders</field>
+        <field name="res_model">factory.rework.order</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a controlled shop-floor rework order.
+            </p>
+        </field>
+    </record>
+</odoo>

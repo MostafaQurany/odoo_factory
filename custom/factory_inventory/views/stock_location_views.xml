@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_location_form_inherit_factory" model="ir.ui.view">
+        <field name="name">stock.location.form.inherit.factory</field>
+        <field name="model">stock.location</field>
+        <field name="inherit_id" ref="stock.view_location_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='usage']" position="after">
+                <field name="factory_location_type"/>
+                <field name="is_factory_controlled"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_location_tree_inherit_factory" model="ir.ui.view">
+        <field name="name">stock.location.list.inherit.factory</field>
+        <field name="model">stock.location</field>
+        <field name="inherit_id" ref="stock.view_location_tree2"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='usage']" position="after">
+                <field name="factory_location_type"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

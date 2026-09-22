@@ -28,7 +28,7 @@ if (-not $DbName) {
 }
 
 Write-Host "==========================================================" -ForegroundColor Cyan
-Write-Host " ODOO FACTORY PLATFORM — TEST RUNNER" -ForegroundColor Cyan
+Write-Host " ODOO FACTORY PLATFORM -- TEST RUNNER" -ForegroundColor Cyan
 Write-Host " Test Database : $DbName" -ForegroundColor Yellow
 Write-Host " Target Module : $(if ($Module) {$Module} else {'All installed'})" -ForegroundColor Yellow
 Write-Host " Scenario Code : $(if ($Scenario) {$Scenario} else {'N/A'})" -ForegroundColor Yellow

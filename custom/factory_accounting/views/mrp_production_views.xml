@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mrp_production_form_inherit_factory_accounting" model="ir.ui.view">
+        <field name="name">mrp.production.form.inherit.factory.accounting</field>
+        <field name="model">mrp.production</field>
+        <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Industrial Cost Breakdown" name="cost_breakdown">
+                    <group>
+                        <group string="Cost Components">
+                            <field name="cost_raw_materials" widget="monetary"/>
+                            <field name="cost_workcenter_labor" widget="monetary"/>
+                            <field name="cost_workcenter_overhead" widget="monetary"/>
+                        </group>
+                        <group string="Total &amp; Unit Cost">
+                            <field name="cost_manufacturing_total" widget="monetary" class="oe_subtotal_footer_separator"/>
+                            <field name="unit_cost_manufactured" widget="monetary"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

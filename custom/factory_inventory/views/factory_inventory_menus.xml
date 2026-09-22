@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inventory submenus under Factory Operations -->
+    <menuitem id="menu_factory_inventory_locations"
+              name="Factory Locations"
+              parent="factory_base.menu_factory_configuration"
+              action="stock.action_location_form"
+              sequence="15"/>
+
+    <menuitem id="menu_factory_inventory_lots"
+              name="Lot / Serial Traceability"
+              parent="factory_base.menu_factory_operations"
+              action="stock.action_production_lot_form"
+              sequence="25"/>
+</odoo>

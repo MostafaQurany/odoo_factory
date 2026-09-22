@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- 1. Manufacturing Order Card -->
+    <record id="action_report_mrp_order_card" model="ir.actions.report">
+        <field name="name">Manufacturing Order Card / Traveler</field>
+        <field name="model">mrp.production</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">factory_reports.report_mrp_order_card_template</field>
+        <field name="report_file">factory_reports.report_mrp_order_card_template</field>
+        <field name="print_report_name">'MO_Traveler_' + (object.name or '').replace('/', '_')</field>
+        <field name="binding_model_id" ref="mrp.model_mrp_production"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- 2. BOM / Material Requirement Sheet -->
+    <record id="action_report_mrp_bom_sheet" model="ir.actions.report">
+        <field name="name">BOM Material Requirement Sheet</field>
+        <field name="model">mrp.bom</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">factory_reports.report_mrp_bom_sheet_template</field>
+        <field name="report_file">factory_reports.report_mrp_bom_sheet_template</field>
+        <field name="print_report_name">'BOM_Sheet_' + (object.code or object.product_tmpl_id.name)</field>
+        <field name="binding_model_id" ref="mrp.model_mrp_bom"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- 3. Production Pick List -->
+    <record id="action_report_production_pick_list" model="ir.actions.report">
+        <field name="name">Production Pick List</field>
+        <field name="model">mrp.production</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">factory_reports.report_production_pick_list_template</field>
+        <field name="report_file">factory_reports.report_production_pick_list_template</field>
+        <field name="binding_model_id" ref="mrp.model_mrp_production"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- 4. Material Consumption Report -->
+    <record id="action_report_material_consumption" model="ir.actions.report">
+        <field name="name">Material Consumption Report</field>
+        <field name="model">mrp.production</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">factory_reports.report_material_consumption_template</field>
+        <field name="report_file">factory_reports.report_material_consumption_template</field>
+        <field name="binding_model_id" ref="mrp.model_mrp_production"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- 5. Finished Production Report -->
+    <record id="action_report_finished_production" model="ir.actions.report">
+        <field name="name">Finished Production Slip</field>
+        <field name="model">mrp.production</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">factory_reports.report_finished_production_template</field>
+        <field name="report_file">factory_reports.report_finished_production_template</field>
+        <field name="binding_model_id" ref="mrp.model_mrp_production"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- 6. Scrap Report -->
+    <record id="action_report_stock_scrap" model="ir.actions.report">
+        <field name="name">Scrap Disposition Certificate</field>
+        <field name="model">stock.scrap</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">factory_reports.report_stock_scrap_template</field>
+        <field name="report_file">factory_reports.report_stock_scrap_template</field>
+        <field name="binding_model_id" ref="stock.model_stock_scrap"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- 7. Rework Report -->
+    <record id="action_report_rework_order" model="ir.actions.report">
+        <field name="name">Controlled Rework Order Traveler</field>
+        <field name="model">factory.rework.order</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">factory_reports.report_rework_order_template</field>
+        <field name="report_file">factory_reports.report_rework_order_template</field>
+        <field name="binding_model_id" ref="factory_quality.model_factory_rework_order"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- 8. Quality Inspection Report -->
+    <record id="action_report_qc_inspection" model="ir.actions.report">
+        <field name="name">Quality Inspection Certificate</field>
+        <field name="model">qc.inspection</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">factory_reports.report_qc_inspection_template</field>
+        <field name="report_file">factory_reports.report_qc_inspection_template</field>
+        <field name="binding_model_id" ref="quality_control_oca.model_qc_inspection"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- 9. Lot Traceability Report -->
+    <record id="action_report_lot_traceability" model="ir.actions.report">
+        <field name="name">Lot Traceability Summary</field>
+        <field name="model">stock.lot</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">factory_reports.report_lot_traceability_template</field>
+        <field name="report_file">factory_reports.report_lot_traceability_template</field>
+        <field name="binding_model_id" ref="stock.model_stock_lot"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- 10. Stock Availability Report -->
+    <record id="action_report_stock_availability" model="ir.actions.report">
+        <field name="name">Stock Availability Statement</field>
+        <field name="model">stock.warehouse</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">factory_reports.report_stock_availability_template</field>
+        <field name="report_file">factory_reports.report_stock_availability_template</field>
+        <field name="binding_model_id" ref="stock.model_stock_warehouse"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- 11. Inventory Valuation Report -->
+    <record id="action_report_inventory_valuation" model="ir.actions.report">
+        <field name="name">Inventory Valuation Audit</field>
+        <field name="model">stock.location</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">factory_reports.report_inventory_valuation_template</field>
+        <field name="report_file">factory_reports.report_inventory_valuation_template</field>
+        <field name="binding_model_id" ref="stock.model_stock_location"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- 12. Purchase Receipt Incoming Material Report -->
+    <record id="action_report_purchase_incoming" model="ir.actions.report">
+        <field name="name">Purchase Material Incoming Slip</field>
+        <field name="model">purchase.order</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">factory_reports.report_purchase_incoming_template</field>
+        <field name="report_file">factory_reports.report_purchase_incoming_template</field>
+        <field name="binding_model_id" ref="purchase.model_purchase_order"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- 13. Supplier Performance Report -->
+    <record id="action_report_supplier_performance" model="ir.actions.report">
+        <field name="name">Supplier Performance Scorecard</field>
+        <field name="model">res.partner</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">factory_reports.report_supplier_performance_template</field>
+        <field name="report_file">factory_reports.report_supplier_performance_template</field>
+        <field name="binding_model_id" ref="base.model_res_partner"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- 14. Production Cost Report -->
+    <record id="action_report_production_costing" model="ir.actions.report">
+        <field name="name">Production Costing Analysis</field>
+        <field name="model">mrp.production</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">factory_reports.report_production_costing_template</field>
+        <field name="report_file">factory_reports.report_production_costing_template</field>
+        <field name="binding_model_id" ref="mrp.model_mrp_production"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- 15. Planned vs Actual Manufacturing Report -->
+    <record id="action_report_manufacturing_variance" model="ir.actions.report">
+        <field name="name">Planned vs Actual Manufacturing Variance</field>
+        <field name="model">mrp.production</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">factory_reports.report_manufacturing_variance_template</field>
+        <field name="report_file">factory_reports.report_manufacturing_variance_template</field>
+        <field name="binding_model_id" ref="mrp.model_mrp_production"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <!-- 16. Delivery Documents -->
+    <record id="action_report_factory_delivery_slip" model="ir.actions.report">
+        <field name="name">Factory Dispatch &amp; Delivery Slip</field>
+        <field name="model">stock.picking</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">factory_reports.report_factory_delivery_slip_template</field>
+        <field name="report_file">factory_reports.report_factory_delivery_slip_template</field>
+        <field name="binding_model_id" ref="stock.model_stock_picking"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

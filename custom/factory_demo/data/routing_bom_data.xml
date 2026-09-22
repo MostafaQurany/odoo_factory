@@ -3,7 +3,7 @@
     <data noupdate="1">
         <!-- Sub-BOM for COMP-001 -->
         <record id="bom_comp_001" model="mrp.bom">
-            <field name="product_tmpl_id" ref="product_comp_001"/>
+            <field name="product_tmpl_id" search="[('default_code', '=', 'COMP-001')]"/>
             <field name="product_qty">1.0</field>
             <field name="type">normal</field>
             <field name="code">BOM-COMP-001-REV1</field>
@@ -23,7 +23,7 @@
 
         <!-- Main BOM for FG-001 -->
         <record id="bom_fg_001" model="mrp.bom">
-            <field name="product_tmpl_id" ref="product_fg_001"/>
+            <field name="product_tmpl_id" search="[('default_code', '=', 'FG-001')]"/>
             <field name="product_qty">1.0</field>
             <field name="type">normal</field>
             <field name="code">BOM-FG-001-REV1</field>

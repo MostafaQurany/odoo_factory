@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_factory_equipment_user,factory.equipment.user,model_factory_equipment,factory_base.group_factory_user,1,0,0,0
+access_factory_equipment_engineer,factory.equipment.engineer,model_factory_equipment,factory_base.group_factory_engineer,1,1,1,0
+access_factory_equipment_manager,factory.equipment.manager,model_factory_equipment,factory_base.group_factory_manager,1,1,1,1
+access_factory_maintenance_request_user,factory.maintenance.request.user,model_factory_maintenance_request,factory_base.group_factory_user,1,1,1,0
+access_factory_maintenance_request_manager,factory.maintenance.request.manager,model_factory_maintenance_request,factory_base.group_factory_manager,1,1,1,1

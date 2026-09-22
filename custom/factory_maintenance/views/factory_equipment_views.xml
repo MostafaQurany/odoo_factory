@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_factory_equipment_tree" model="ir.ui.view">
+        <field name="name">factory.equipment.list</field>
+        <field name="model">factory.equipment</field>
+        <field name="arch" type="xml">
+            <list string="Factory Machinery &amp; Equipment" decoration-success="state == 'operational'" decoration-danger="state == 'maintenance'" decoration-muted="state == 'scrap'">
+                <field name="code"/>
+                <field name="name"/>
+                <field name="workcenter_id"/>
+                <field name="model_number"/>
+                <field name="serial_number"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_factory_equipment_form" model="ir.ui.view">
+        <field name="name">factory.equipment.form</field>
+        <field name="model">factory.equipment</field>
+        <field name="arch" type="xml">
+            <form string="Factory Machine">
+                <header>
+                    <field name="state" widget="statusbar" statusbar_visible="operational,maintenance,scrap"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_view_maintenance_requests" type="object" class="oe_stat_button" icon="fa-wrench">
+                            <field name="maintenance_count" widget="statinfo" string="Repairs"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Equipment Name e.g. CNC Lathe 01"/></h1>
+                        <h3><field name="code" placeholder="Asset Tag e.g. EQ-CNC-001"/></h3>
+                    </div>
+                    <group>
+                        <group string="Location &amp; Work Center">
+                            <field name="workcenter_id"/>
+                            <field name="barcode"/>
+                        </group>
+                        <group string="Technical Specifications">
+                            <field name="vendor_id"/>
+                            <field name="model_number"/>
+                            <field name="serial_number"/>
+                            <field name="installation_date"/>
+                        </group>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_factory_equipment" model="ir.actions.act_window">
+        <field name="name">Plant Machinery &amp; Equipment</field>
+        <field name="res_model">factory.equipment</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

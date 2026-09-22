@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_stock_picking_executive,stock.picking.executive,stock.model_stock_picking,group_factory_executive_readonly,1,0,0,0
+access_mrp_production_executive,mrp.production.executive,mrp.model_mrp_production,group_factory_executive_readonly,1,0,0,0
+access_purchase_order_executive,purchase.order.executive,purchase.model_purchase_order,group_factory_executive_readonly,1,0,0,0
+access_sale_order_executive,sale.order.executive,sale.model_sale_order,group_factory_executive_readonly,1,0,0,0
+access_account_move_executive,account.move.executive,account.model_account_move,group_factory_executive_readonly,1,0,0,0

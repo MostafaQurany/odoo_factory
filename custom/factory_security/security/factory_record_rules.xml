@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="factory_multi_company_rule" model="ir.rule">
+        <field name="name">Factory Base Multi-Company Rule</field>
+        <field name="model_id" ref="base.model_res_company"/>
+        <field name="domain_force">['|', ('id', '=', False), ('id', 'in', company_ids)]</field>
+        <field name="global" eval="True"/>
+    </record>
+</odoo>

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_purchase_order_factory_user,purchase.order.factory.user,purchase.model_purchase_order,factory_base.group_factory_user,1,1,1,0
+access_purchase_order_factory_manager,purchase.order.factory.manager,purchase.model_purchase_order,factory_base.group_factory_manager,1,1,1,1

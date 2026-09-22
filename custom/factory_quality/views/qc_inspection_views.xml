@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="qc_inspection_form_inherit_factory" model="ir.ui.view">
+        <field name="name">qc.inspection.form.inherit.factory</field>
+        <field name="model">qc.inspection</field>
+        <field name="inherit_id" ref="quality_control_oca.qc_inspection_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_set_pass" string="Pass Quality Gate" type="object" class="btn-success" invisible="factory_disposition in ('pass', 'scrap')"/>
+                <button name="action_set_hold" string="Hold in Quarantine" type="object" class="btn-warning" invisible="factory_disposition in ('hold', 'scrap')"/>
+                <button name="action_set_rework" string="Issue Rework Order" type="object" class="btn-primary" invisible="factory_disposition in ('rework', 'scrap', 'pass')"/>
+                <button name="action_set_scrap" string="Reject &amp; Scrap" type="object" class="btn-danger" invisible="factory_disposition in ('scrap', 'pass')"/>
+            </xpath>
+            <xpath expr="//field[@name='date']" position="before">
+                <field name="quality_gate"/>
+                <field name="factory_disposition" readonly="1"/>
+            </xpath>
+            <xpath expr="//field[@name='user']" position="after">
+                <field name="inspector_id"/>
+                <field name="workcenter_id"/>
+                <field name="lot_id"/>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Factory Disposition &amp; Actions" name="factory_disposition">
+                    <group>
+                        <field name="inspection_notes" placeholder="Observations, measurements, visual defects..."/>
+                    </group>
+                    <separator string="Associated Rework Orders"/>
+                    <field name="rework_order_ids" readonly="1"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

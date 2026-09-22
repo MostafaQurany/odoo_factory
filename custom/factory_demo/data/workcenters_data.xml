@@ -6,7 +6,7 @@
             <field name="name">WC-CUTTING Laser &amp; Shearing</field>
             <field name="code">WC-CUT</field>
             <field name="time_efficiency">100.0</field>
-            <field name="capacity">1.0</field>
+            <field name="default_capacity">1.0</field>
             <field name="costs_hour">65.0</field>
         </record>
 
@@ -14,7 +14,7 @@
             <field name="name">WC-WELDING TIG/MIG Cell</field>
             <field name="code">WC-WELD</field>
             <field name="time_efficiency">100.0</field>
-            <field name="capacity">1.0</field>
+            <field name="default_capacity">1.0</field>
             <field name="costs_hour">75.0</field>
         </record>
 
@@ -22,7 +22,7 @@
             <field name="name">WC-ASSEMBLY Mechanical Line</field>
             <field name="code">WC-ASSY</field>
             <field name="time_efficiency">100.0</field>
-            <field name="capacity">2.0</field>
+            <field name="default_capacity">2.0</field>
             <field name="costs_hour">50.0</field>
         </record>
 
@@ -30,7 +30,7 @@
             <field name="name">WC-QUALITY Stress &amp; Tolerance Station</field>
             <field name="code">WC-QC</field>
             <field name="time_efficiency">100.0</field>
-            <field name="capacity">1.0</field>
+            <field name="default_capacity">1.0</field>
             <field name="costs_hour">80.0</field>
         </record>
 
@@ -38,7 +38,7 @@
             <field name="name">WC-PACKING Packaging &amp; Staging</field>
             <field name="code">WC-PACK</field>
             <field name="time_efficiency">100.0</field>
-            <field name="capacity">2.0</field>
+            <field name="default_capacity">2.0</field>
             <field name="costs_hour">40.0</field>
         </record>
     </data>

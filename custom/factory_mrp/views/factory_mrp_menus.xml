@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Manufacturing submenus under Factory Operations -->
+    <menuitem id="menu_factory_mrp_production"
+              name="Manufacturing Orders"
+              parent="factory_base.menu_factory_operations"
+              action="mrp.mrp_production_action"
+              sequence="5"/>
+
+    <menuitem id="menu_factory_mrp_workcenters"
+              name="Work Centers &amp; Cells"
+              parent="factory_base.menu_factory_configuration"
+              action="mrp.mrp_workcenter_action"
+              sequence="20"/>
+
+    <menuitem id="menu_factory_mrp_bom"
+              name="Bills of Materials"
+              parent="factory_base.menu_factory_configuration"
+              action="mrp.mrp_bom_form_action"
+              sequence="25"/>
+</odoo>

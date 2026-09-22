@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sale_order_factory_user,sale.order.factory.user,sale.model_sale_order,factory_base.group_factory_user,1,1,1,0
+access_sale_order_factory_manager,sale.order.factory.manager,sale.model_sale_order,factory_base.group_factory_manager,1,1,1,1

@@ -441,12 +441,21 @@
     "web_widget_url_advanced",
     "web_widget_x2many_2d_matrix",
     "clothing_factory_demo",
+    "factory_accounting",
     "factory_base",
     "factory_demo",
+    "factory_inventory",
+    "factory_maintenance",
+    "factory_mrp",
     "factory_profile_advanced",
     "factory_profile_core",
     "factory_profile_full",
     "factory_profile_operations",
+    "factory_purchase",
+    "factory_quality",
+    "factory_reports",
+    "factory_sale",
+    "factory_security",
     "odoo_factory_all"
   ],
   "edges": {
@@ -1949,6 +1958,14 @@
       "web_responsive",
       "web_timeline"
     ],
+    "factory_accounting": [
+      "base",
+      "account",
+      "stock_account",
+      "factory_base",
+      "factory_inventory",
+      "factory_mrp"
+    ],
     "factory_base": [
       "base",
       "mail"
@@ -1961,10 +1978,37 @@
       "sale_management",
       "factory_base"
     ],
+    "factory_inventory": [
+      "base",
+      "stock",
+      "stock_no_negative",
+      "factory_base"
+    ],
+    "factory_maintenance": [
+      "base",
+      "mrp",
+      "barcodes",
+      "factory_base",
+      "factory_mrp"
+    ],
+    "factory_mrp": [
+      "base",
+      "mrp",
+      "stock",
+      "factory_base",
+      "factory_inventory"
+    ],
     "factory_profile_advanced": [
       "account",
       "ddmrp",
+      "factory_accounting",
       "factory_base",
+      "factory_inventory",
+      "factory_mrp",
+      "factory_purchase",
+      "factory_quality",
+      "factory_sale",
+      "factory_security",
       "mrp",
       "mrp_bom_hierarchy",
       "mrp_bom_version",
@@ -1981,7 +2025,13 @@
     ],
     "factory_profile_core": [
       "account",
+      "factory_accounting",
       "factory_base",
+      "factory_inventory",
+      "factory_mrp",
+      "factory_purchase",
+      "factory_sale",
+      "factory_security",
       "mrp",
       "purchase",
       "sale_management",
@@ -1990,7 +2040,14 @@
     "factory_profile_full": [
       "account",
       "ddmrp",
+      "factory_accounting",
       "factory_base",
+      "factory_inventory",
+      "factory_mrp",
+      "factory_purchase",
+      "factory_quality",
+      "factory_sale",
+      "factory_security",
       "mrp",
       "mrp_bom_hierarchy",
       "mrp_bom_version",
@@ -2007,7 +2064,14 @@
     ],
     "factory_profile_operations": [
       "account",
+      "factory_accounting",
       "factory_base",
+      "factory_inventory",
+      "factory_mrp",
+      "factory_purchase",
+      "factory_quality",
+      "factory_sale",
+      "factory_security",
       "mrp",
       "mrp_workcenter_scrap_reason",
       "purchase",
@@ -2018,6 +2082,53 @@
       "sale_management",
       "scrap_reason_code",
       "stock"
+    ],
+    "factory_purchase": [
+      "base",
+      "purchase",
+      "purchase_stock",
+      "factory_base",
+      "factory_inventory"
+    ],
+    "factory_quality": [
+      "base",
+      "stock",
+      "mrp",
+      "quality_control_oca",
+      "quality_control_mrp_oca",
+      "scrap_reason_code",
+      "mrp_workcenter_scrap_reason",
+      "factory_base",
+      "factory_inventory",
+      "factory_mrp"
+    ],
+    "factory_reports": [
+      "base",
+      "mrp",
+      "stock",
+      "purchase",
+      "factory_base",
+      "factory_inventory",
+      "factory_mrp",
+      "factory_quality",
+      "factory_accounting"
+    ],
+    "factory_sale": [
+      "base",
+      "sale_management",
+      "sale_stock",
+      "factory_base",
+      "factory_inventory",
+      "factory_mrp"
+    ],
+    "factory_security": [
+      "base",
+      "factory_base",
+      "stock",
+      "mrp",
+      "purchase",
+      "sale_management",
+      "account"
     ],
     "odoo_factory_all": [
       "account_move_line_mrp_info",
@@ -2626,6 +2737,6 @@
       "base_sparse_field"
     ]
   },
-  "total_modules": 448,
-  "total_edges": 1064
+  "total_modules": 457,
+  "total_edges": 1148
 }

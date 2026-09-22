@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mrp_production_factory_user,mrp.production.factory.user,mrp.model_mrp_production,factory_base.group_factory_user,1,1,1,0
+access_mrp_production_factory_manager,mrp.production.factory.manager,mrp.model_mrp_production,factory_base.group_factory_manager,1,1,1,1
+access_mrp_workcenter_factory_user,mrp.workcenter.factory.user,mrp.model_mrp_workcenter,factory_base.group_factory_user,1,0,0,0
+access_mrp_workcenter_factory_manager,mrp.workcenter.factory.manager,mrp.model_mrp_workcenter,factory_base.group_factory_manager,1,1,1,1

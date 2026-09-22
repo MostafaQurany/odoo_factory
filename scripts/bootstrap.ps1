@@ -64,7 +64,7 @@ $moduleArg = $targetModules -join ","
 $flag = if ($Update) { "-u" } else { "-i" }
 
 Write-Host "==========================================================" -ForegroundColor Cyan
-Write-Host " ODOO FACTORY PLATFORM — BOOTSTRAP RUNNER" -ForegroundColor Cyan
+Write-Host " ODOO FACTORY PLATFORM -- BOOTSTRAP RUNNER" -ForegroundColor Cyan
 Write-Host " Database : $DbName" -ForegroundColor Yellow
 Write-Host " Action   : $(if ($Update) {'Upgrade (-u)'} else {'Install (-i)'})" -ForegroundColor Yellow
 Write-Host " Modules  : $moduleArg" -ForegroundColor Yellow
@@ -77,5 +77,5 @@ Invoke-Expression $cmd
 if ($LASTEXITCODE -eq 0) {
     Write-Host "`n[SUCCESS] Bootstrap operation completed successfully." -ForegroundColor Green
 } else {
-    Write-Error "[FAILURE] Bootstrap operation failed with exit code $LASTEXITCODE."
+    Write-Error ('[FAILURE] Bootstrap operation failed with exit code ' + $LASTEXITCODE)
 }

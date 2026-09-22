@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mrp_bom_form_view_inherit_factory" model="ir.ui.view">
+        <field name="name">mrp.bom.form.inherit.factory</field>
+        <field name="model">mrp.bom</field>
+        <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='code']" position="after">
+                <field name="bom_revision"/>
+                <field name="engineering_approved_by_id"/>
+                <field name="engineering_approval_date"/>
+            </xpath>
+            <xpath expr="//page[@name='miscellaneous']" position="inside">
+                <group string="Engineering Process Documentation">
+                    <field name="engineering_notes" placeholder="Engineering change order rationale, tolerances, special instructions..."/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="purchase_order_form_inherit_factory" model="ir.ui.view">
+        <field name="name">purchase.order.form.inherit.factory</field>
+        <field name="model">purchase.order</field>
+        <field name="inherit_id" ref="purchase.purchase_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_factory_approve" string="Factory Approve" type="object" class="btn-success" invisible="factory_approval_state != 'to_approve'" groups="factory_base.group_factory_manager"/>
+                <button name="action_factory_reject" string="Factory Reject" type="object" class="btn-danger" invisible="factory_approval_state != 'to_approve'" groups="factory_base.group_factory_manager"/>
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="factory_purchase_type"/>
+                <field name="factory_approval_state" readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

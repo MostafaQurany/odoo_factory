@@ -8,7 +8,7 @@
     'summary': 'Minimal viable factory ERP: Sales, Purchasing, Inventory, MRP, Accounting, Security',
     'author': 'Odoo Factory Platform',
     'license': 'LGPL-3',
-    'depends': ['account', 'factory_base', 'mrp', 'purchase', 'sale_management', 'stock'],
+    'depends': ['account', 'factory_accounting', 'factory_base', 'factory_inventory', 'factory_mrp', 'factory_purchase', 'factory_sale', 'factory_security', 'mrp', 'purchase', 'sale_management', 'stock'],
     'data': [],
     'installable': True,
     'application': True,

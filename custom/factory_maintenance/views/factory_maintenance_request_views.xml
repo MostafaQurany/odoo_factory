@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_factory_maintenance_request_tree" model="ir.ui.view">
+        <field name="name">factory.maintenance.request.list</field>
+        <field name="model">factory.maintenance.request</field>
+        <field name="arch" type="xml">
+            <list string="Maintenance Requests" decoration-info="state == 'draft'" decoration-danger="state == 'in_progress'" decoration-success="state == 'done'">
+                <field name="name"/>
+                <field name="equipment_id"/>
+                <field name="workcenter_id"/>
+                <field name="maintenance_type"/>
+                <field name="technician_id"/>
+                <field name="downtime_hours"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_factory_maintenance_request_form" model="ir.ui.view">
+        <field name="name">factory.maintenance.request.form</field>
+        <field name="model">factory.maintenance.request</field>
+        <field name="arch" type="xml">
+            <form string="Maintenance Request">
+                <header>
+                    <button name="action_start_repair" string="Start Work / Down Machine" type="object" class="btn-danger" invisible="state != 'draft'"/>
+                    <button name="action_finish_repair" string="Complete &amp; Restore Machine" type="object" class="btn-success" invisible="state != 'in_progress'"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,in_progress,done"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" readonly="1"/></h1>
+                    </div>
+                    <group>
+                        <group string="Equipment &amp; Failure">
+                            <field name="equipment_id"/>
+                            <field name="workcenter_id" readonly="1"/>
+                            <field name="maintenance_type"/>
+                            <field name="failure_reason"/>
+                        </group>
+                        <group string="Schedule &amp; Downtime">
+                            <field name="technician_id"/>
+                            <field name="planned_date"/>
+                            <field name="completion_date" readonly="1"/>
+                            <field name="downtime_hours"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Repair Log &amp; Replaced Parts" name="work_summary">
+                            <field name="work_summary" placeholder="Describe mechanical or electrical interventions, replaced bearings, lubricants..."/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_factory_maintenance_request" model="ir.actions.act_window">
+        <field name="name">Maintenance Requests</field>
+        <field name="res_model">factory.maintenance.request</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

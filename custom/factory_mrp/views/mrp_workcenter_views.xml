@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mrp_workcenter_view_inherit_factory" model="ir.ui.view">
+        <field name="name">mrp.workcenter.form.inherit.factory</field>
+        <field name="model">mrp.workcenter</field>
+        <field name="inherit_id" ref="mrp.mrp_workcenter_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='code']" position="after">
+                <field name="factory_section"/>
+                <field name="maintenance_status"/>
+            </xpath>
+            <xpath expr="//group[@name='costing']" position="inside">
+                <field name="hourly_labor_cost"/>
+                <field name="hourly_overhead_cost"/>
+                <field name="total_hourly_rate" readonly="1" class="oe_subtotal_footer_separator"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
