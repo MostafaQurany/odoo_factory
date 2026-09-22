@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_company_form_inherit_factory" model="ir.ui.view">
+        <field name="name">res.company.form.inherit.factory</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Factory Settings" name="factory_settings">
+                    <group>
+                        <group string="Manufacturing Facility Identification">
+                            <field name="factory_code"/>
+                            <field name="industrial_license_number"/>
+                            <field name="primary_manufacturing_type"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

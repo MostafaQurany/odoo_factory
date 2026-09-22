@@ -441,6 +441,7 @@
     "web_widget_url_advanced",
     "web_widget_x2many_2d_matrix",
     "clothing_factory_demo",
+    "factory_base",
     "factory_profile_advanced",
     "factory_profile_core",
     "factory_profile_full",
@@ -1947,6 +1948,10 @@
       "web_responsive",
       "web_timeline"
     ],
+    "factory_base": [
+      "base",
+      "mail"
+    ],
     "factory_profile_advanced": [
       "account",
       "ddmrp",
@@ -2610,20 +2615,8 @@
     ],
     "web_company_color": [
       "base_sparse_field"
-    ],
-    "factory_profile_advanced": [
-      "factory_base"
-    ],
-    "factory_profile_core": [
-      "factory_base"
-    ],
-    "factory_profile_full": [
-      "factory_base"
-    ],
-    "factory_profile_operations": [
-      "factory_base"
     ]
   },
-  "total_modules": 446,
-  "total_edges": 1056
+  "total_modules": 447,
+  "total_edges": 1058
 }

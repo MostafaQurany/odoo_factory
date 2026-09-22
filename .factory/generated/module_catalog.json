@@ -10848,6 +10848,31 @@
     "status": "active",
     "risk": "low"
   },
+  "factory_base": {
+    "technical_name": "factory_base",
+    "display_name": "Factory Base Engine",
+    "repository": "custom",
+    "path": "custom/factory_base",
+    "version": "18.0.1.0.0",
+    "license": "LGPL-3",
+    "category": "Manufacturing",
+    "summary": "Foundational settings, industrial security groups, and root factory menus",
+    "depends": [
+      "base",
+      "mail"
+    ],
+    "auto_install": false,
+    "installable": true,
+    "application": true,
+    "external_dependencies": {},
+    "ownership": "custom",
+    "classification": "UNCLASSIFIED",
+    "capabilities": [],
+    "odoo_version": "18.0",
+    "edition_requirement": "community",
+    "status": "active",
+    "risk": "low"
+  },
   "factory_profile_advanced": {
     "technical_name": "factory_profile_advanced",
     "display_name": "Factory Profile: Advanced",

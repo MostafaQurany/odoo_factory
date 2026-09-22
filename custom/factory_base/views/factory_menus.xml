@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Top-level Factory Platform Root Menu -->
+    <menuitem id="menu_factory_root"
+              name="Factory Operations"
+              web_icon="factory_base,static/description/icon.png"
+              sequence="15"
+              groups="group_factory_user"/>
+
+    <!-- Sub-menus -->
+    <menuitem id="menu_factory_dashboard"
+              name="Dashboard"
+              parent="menu_factory_root"
+              sequence="1"/>
+
+    <menuitem id="menu_factory_operations"
+              name="Operations"
+              parent="menu_factory_root"
+              sequence="10"/>
+
+    <menuitem id="menu_factory_quality"
+              name="Quality Control"
+              parent="menu_factory_root"
+              sequence="20"
+              groups="group_factory_quality,group_factory_manager"/>
+
+    <menuitem id="menu_factory_configuration"
+              name="Configuration"
+              parent="menu_factory_root"
+              sequence="90"
+              groups="group_factory_manager"/>
+</odoo>
