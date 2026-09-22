@@ -1,32 +1,40 @@
-version: '3.8'
-
 services:
   web:
     image: odoo:18.0
     container_name: odoo_factory_system
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     ports:
       - "8069:8069"
     environment:
       - HOST=db
-      - USER=odoo
-      - PASSWORD=odoo
-    command: odoo --load=base,web,queue_job -d odoo -i odoo_factory_all,clothing_factory_demo --addons-path=/mnt/extra-addons/manufacture,/mnt/extra-addons/ddmrp,/mnt/extra-addons/stock-logistics-warehouse,/mnt/extra-addons/stock-logistics-orderpoint,/mnt/extra-addons/server-backend,/mnt/extra-addons/server-tools,/mnt/extra-addons/stock-logistics-workflow,/mnt/extra-addons/web,/mnt/extra-addons/stock-logistics-availability,/mnt/extra-addons/queue,/usr/lib/python3/dist-packages/odoo/addons
+      - USER=${POSTGRES_USER:-odoo}
+      - PASSWORD=${POSTGRES_PASSWORD:-odoo}
+    command: >
+      odoo --load=base,web,queue_job
+      -d ${ODOO_DB:-odoo}
+      --addons-path=/mnt/custom-addons,/mnt/extra-addons/manufacture,/mnt/extra-addons/ddmrp,/mnt/extra-addons/stock-logistics-warehouse,/mnt/extra-addons/stock-logistics-orderpoint,/mnt/extra-addons/server-backend,/mnt/extra-addons/server-tools,/mnt/extra-addons/stock-logistics-workflow,/mnt/extra-addons/web,/mnt/extra-addons/stock-logistics-availability,/mnt/extra-addons/queue,/usr/lib/python3/dist-packages/odoo/addons
     volumes:
       - odoo-web-data:/var/lib/odoo
       - ./addons:/mnt/extra-addons
+      - ./custom:/mnt/custom-addons
 
   db:
     image: postgres:16
     container_name: odoo_factory_db
     environment:
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=odoo
-      - POSTGRES_PASSWORD=odoo
+      - POSTGRES_DB=${POSTGRES_DB:-postgres}
+      - POSTGRES_USER=${POSTGRES_USER:-odoo}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-odoo}
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
       - odoo-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-odoo} -d ${POSTGRES_DB:-postgres}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
 
 volumes:
   odoo-web-data:
