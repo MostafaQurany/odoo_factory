@@ -1,0 +1,67 @@
+classifications:
+  - CORE
+  - OPERATIONS
+  - ADVANCED
+  - INFRASTRUCTURE
+  - INTEGRATION
+  - UI
+  - DEV
+  - TEST
+  - HARDWARE
+  - LEGACY
+  - UNCLASSIFIED
+
+rules:
+  test_prefix_classification: TEST
+  hardware_patterns:
+    - "stock_vertical_lift*"
+    - "stock_vlm_*"
+  infrastructure_patterns:
+    - "queue_job*"
+    - "server_tools*"
+    - "base_external_*"
+    - "bus_alt_connection"
+    - "dbfilter_from_header"
+    - "session_db"
+
+module_overrides:
+  queue_job:
+    classification: INFRASTRUCTURE
+    reason: "Core asynchronous job runner engine"
+    status: approved
+  queue_job_cron:
+    classification: INFRASTRUCTURE
+    reason: "Cron triggers for background queue jobs"
+    status: approved
+  quality_control_oca:
+    classification: OPERATIONS
+    reason: "Foundational OCA quality inspection engine"
+    status: approved
+  quality_control_stock_oca:
+    classification: OPERATIONS
+    reason: "Inventory receipt and transfer quality gates"
+    status: approved
+  quality_control_mrp_oca:
+    classification: OPERATIONS
+    reason: "Manufacturing and work order quality gates"
+    status: approved
+  scrap_reason_code:
+    classification: OPERATIONS
+    reason: "Structured scrap reasoning and categorization"
+    status: approved
+  mrp_workcenter_scrap_reason:
+    classification: OPERATIONS
+    reason: "Scrap attribution to specific work centers"
+    status: approved
+  ddmrp:
+    classification: ADVANCED
+    reason: "Demand Driven Material Requirements Planning engine"
+    status: approved
+  clothing_factory_demo:
+    classification: LEGACY
+    reason: "Relocated apparel vertical demo data (deprecated for baseline)"
+    status: legacy
+  odoo_factory_all:
+    classification: LEGACY
+    reason: "Monolithic legacy meta-package (replaced by factory_profile_*)"
+    status: legacy

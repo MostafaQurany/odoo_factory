@@ -1,0 +1,35 @@
+profiles:
+  core:
+    description: "Minimal viable factory ERP: Sales, Purchasing, Inventory, MRP, Accounting, Security"
+    capabilities:
+      - sales
+      - purchasing
+      - inventory
+      - manufacturing
+      - accounting
+      - security_baseline
+    explicit_modules: []
+
+  operations:
+    description: "Core ERP plus factory floor operations: Quality inspection gates, Scrap attribution, Queue runner"
+    extends: core
+    capabilities:
+      - manufacturing_quality
+      - scrap_management
+      - background_jobs
+    explicit_modules: []
+
+  advanced:
+    description: "Operations profile plus DDMRP, Advanced BOM hierarchies/versions, and automated orderpoints"
+    extends: operations
+    capabilities:
+      - ddmrp
+      - advanced_bom
+      - advanced_replenishment
+    explicit_modules: []
+
+  full:
+    description: "All production-approved capabilities in the Factory Platform"
+    extends: advanced
+    capabilities: []
+    explicit_modules: []

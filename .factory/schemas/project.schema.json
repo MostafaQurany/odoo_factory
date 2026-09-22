@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ProjectContract",
+  "type": "object",
+  "required": ["project", "odoo", "database", "localization", "paths", "policies"],
+  "properties": {
+    "project": {
+      "type": "object",
+      "required": ["name", "version", "description"],
+      "properties": {
+        "name": {"type": "string"},
+        "version": {"type": "string"},
+        "description": {"type": "string"}
+      }
+    },
+    "odoo": {
+      "type": "object",
+      "required": ["version", "edition", "container_name"],
+      "properties": {
+        "version": {"type": "string"},
+        "edition": {"type": "string", "enum": ["community", "enterprise"]},
+        "container_name": {"type": "string"}
+      }
+    },
+    "database": {
+      "type": "object",
+      "required": ["engine", "version", "default_db", "test_db_prefix"],
+      "properties": {
+        "engine": {"type": "string"},
+        "version": {"type": "string"},
+        "default_db": {"type": "string"},
+        "test_db_prefix": {"type": "string"}
+      }
+    },
+    "localization": {
+      "type": "object",
+      "required": ["country", "currency", "accounting_localization"],
+      "properties": {
+        "country": {"type": "string"},
+        "currency": {"type": "string"},
+        "accounting_localization": {"type": "string"}
+      }
+    },
+    "paths": {
+      "type": "object",
+      "required": ["vendor_addons", "custom_addons", "skills", "docs", "metadata"],
+      "properties": {
+        "vendor_addons": {"type": "string"},
+        "custom_addons": {"type": "string"},
+        "skills": {"type": "string"},
+        "docs": {"type": "string"},
+        "metadata": {"type": "string"}
+      }
+    },
+    "policies": {
+      "type": "object",
+      "required": ["vendor_code_read_only", "allow_test_modules_in_production", "require_tests_for_customization", "require_docs_update", "prohibit_direct_sql_ddl", "unclassified_modules_blocked"],
+      "properties": {
+        "vendor_code_read_only": {"type": "boolean"},
+        "allow_test_modules_in_production": {"type": "boolean"},
+        "require_tests_for_customization": {"type": "boolean"},
+        "require_docs_update": {"type": "boolean"},
+        "prohibit_direct_sql_ddl": {"type": "boolean"},
+        "unclassified_modules_blocked": {"type": "boolean"}
+      }
+    }
+  }
+}

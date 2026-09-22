@@ -1,0 +1,35 @@
+project:
+  name: odoo_factory
+  version: "18.0.1.0"
+  description: "Generic Universal Factory ERP Framework"
+
+odoo:
+  version: "18.0"
+  edition: community
+  container_name: odoo_factory_system
+
+database:
+  engine: postgresql
+  version: "16"
+  default_db: odoo
+  test_db_prefix: odoo_test_
+
+localization:
+  country: EG
+  currency: EGP
+  accounting_localization: l10n_eg
+
+paths:
+  vendor_addons: addons
+  custom_addons: custom
+  skills: skills/odoo-factory-engineer
+  docs: docs
+  metadata: .factory
+
+policies:
+  vendor_code_read_only: true
+  allow_test_modules_in_production: false
+  require_tests_for_customization: true
+  require_docs_update: true
+  prohibit_direct_sql_ddl: true
+  unclassified_modules_blocked: true

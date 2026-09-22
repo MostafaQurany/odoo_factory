@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ModulePolicyContract",
+  "type": "object",
+  "required": ["classifications", "rules", "module_overrides"],
+  "properties": {
+    "classifications": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "rules": {
+      "type": "object",
+      "required": ["test_prefix_classification", "hardware_patterns", "infrastructure_patterns"],
+      "properties": {
+        "test_prefix_classification": {"type": "string"},
+        "hardware_patterns": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "infrastructure_patterns": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    },
+    "module_overrides": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["classification"],
+        "properties": {
+          "classification": {"type": "string"},
+          "reason": {"type": "string"},
+          "status": {"type": "string"}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GoldenScenarioContract",
+  "type": "object",
+  "required": ["scenarios", "cross_cutting"],
+  "properties": {
+    "scenarios": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["code", "title", "description", "modules", "capabilities", "steps"],
+        "properties": {
+          "code": {"type": "string"},
+          "title": {"type": "string"},
+          "description": {"type": "string"},
+          "modules": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "capabilities": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "steps": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        }
+      }
+    },
+    "cross_cutting": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["code", "title", "description", "modules", "assertions"],
+        "properties": {
+          "code": {"type": "string"},
+          "title": {"type": "string"},
+          "description": {"type": "string"},
+          "modules": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "assertions": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        }
+      }
+    }
+  }
+}

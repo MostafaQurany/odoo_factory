@@ -1,0 +1,36 @@
+system_checks:
+  - id: SYS-001
+    name: "Database Connectivity"
+    command: "docker compose exec -T db pg_isready -U odoo -d postgres"
+    expected: "accepting connections"
+
+  - id: SYS-002
+    name: "Odoo Service Ready"
+    command: "docker compose run --rm web odoo --version"
+    expected: "Odoo Server 18.0"
+
+  - id: SYS-003
+    name: "Catalog Synchronization"
+    command: "python scripts/factory/scan_modules.py"
+    expected: "Discovered 442 total modules"
+
+  - id: SYS-004
+    name: "Dependency Graph Cycles"
+    command: "python scripts/factory/build_graph.py"
+    expected: "Cycles detected: 0"
+
+data_checks:
+  - id: DATA-001
+    name: "Company Currency Baseline"
+    target_model: "res.company"
+    criteria: "currency_id is not null"
+
+  - id: DATA-002
+    name: "Warehouse Structure"
+    target_model: "stock.warehouse"
+    criteria: "count >= 1"
+
+  - id: DATA-003
+    name: "Work Center Readiness"
+    target_model: "mrp.workcenter"
+    criteria: "count >= 1"

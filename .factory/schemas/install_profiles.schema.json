@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "InstallProfilesContract",
+  "type": "object",
+  "required": ["profiles"],
+  "properties": {
+    "profiles": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["description", "capabilities"],
+        "properties": {
+          "description": {"type": "string"},
+          "extends": {"type": "string"},
+          "capabilities": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "explicit_modules": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        }
+      }
+    }
+  }
+}

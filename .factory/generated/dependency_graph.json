@@ -441,6 +441,10 @@
     "web_widget_url_advanced",
     "web_widget_x2many_2d_matrix",
     "clothing_factory_demo",
+    "factory_profile_advanced",
+    "factory_profile_core",
+    "factory_profile_full",
+    "factory_profile_operations",
     "odoo_factory_all"
   ],
   "edges": {
@@ -1943,6 +1947,64 @@
       "web_responsive",
       "web_timeline"
     ],
+    "factory_profile_advanced": [
+      "account",
+      "ddmrp",
+      "factory_base",
+      "mrp",
+      "mrp_bom_hierarchy",
+      "mrp_bom_version",
+      "mrp_workcenter_scrap_reason",
+      "purchase",
+      "quality_control_mrp_oca",
+      "quality_control_oca",
+      "queue_job",
+      "queue_job_cron",
+      "sale_management",
+      "scrap_reason_code",
+      "stock",
+      "stock_orderpoint_manual_procurement"
+    ],
+    "factory_profile_core": [
+      "account",
+      "factory_base",
+      "mrp",
+      "purchase",
+      "sale_management",
+      "stock"
+    ],
+    "factory_profile_full": [
+      "account",
+      "ddmrp",
+      "factory_base",
+      "mrp",
+      "mrp_bom_hierarchy",
+      "mrp_bom_version",
+      "mrp_workcenter_scrap_reason",
+      "purchase",
+      "quality_control_mrp_oca",
+      "quality_control_oca",
+      "queue_job",
+      "queue_job_cron",
+      "sale_management",
+      "scrap_reason_code",
+      "stock",
+      "stock_orderpoint_manual_procurement"
+    ],
+    "factory_profile_operations": [
+      "account",
+      "factory_base",
+      "mrp",
+      "mrp_workcenter_scrap_reason",
+      "purchase",
+      "quality_control_mrp_oca",
+      "quality_control_oca",
+      "queue_job",
+      "queue_job_cron",
+      "sale_management",
+      "scrap_reason_code",
+      "stock"
+    ],
     "odoo_factory_all": [
       "account_move_line_mrp_info",
       "account_move_line_stock_info",
@@ -2548,8 +2610,20 @@
     ],
     "web_company_color": [
       "base_sparse_field"
+    ],
+    "factory_profile_advanced": [
+      "factory_base"
+    ],
+    "factory_profile_core": [
+      "factory_base"
+    ],
+    "factory_profile_full": [
+      "factory_base"
+    ],
+    "factory_profile_operations": [
+      "factory_base"
     ]
   },
-  "total_modules": 442,
-  "total_edges": 1006
+  "total_modules": 446,
+  "total_edges": 1056
 }

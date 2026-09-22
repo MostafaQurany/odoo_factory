@@ -1,0 +1,242 @@
+scenarios:
+  GS-001:
+    code: GS-001
+    title: "Product Master & Routing Configuration"
+    description: "Validate creation of RM-001, COMP-001, FG-001, routes, UOMs, and multi-level BOM."
+    modules:
+      - product
+      - mrp
+    capabilities:
+      - manufacturing
+    steps:
+      - "Create product templates for Raw Materials (RM-001, RM-002, RM-003)."
+      - "Create product template for Component (COMP-001) with sub-BOM."
+      - "Create product template for Finished Product (FG-001) with main BOM."
+      - "Verify costing method, UOM conversion, and tracking parameters."
+
+  GS-002:
+    code: GS-002
+    title: "Sales Demand Generation"
+    description: "Generate customer quotation, confirm sales order, and verify delivery demand generation."
+    modules:
+      - sale_management
+      - sale_stock
+    capabilities:
+      - sales
+    steps:
+      - "Create Quotation for 10 units of FG-001."
+      - "Confirm Quotation to generate Sales Order."
+      - "Verify outbound stock picking creation."
+
+  GS-003:
+    code: GS-003
+    title: "Stock Availability & Procurement Demands"
+    description: "Check inventory levels, detect insufficient stock, and generate replenishment requisitions."
+    modules:
+      - stock
+      - purchase
+    capabilities:
+      - inventory
+      - purchasing
+    steps:
+      - "Check reservation status on Sales Order picking."
+      - "Verify insufficient finished goods stock."
+      - "Trigger procurement engine to create Purchase Order and Manufacturing Order demands."
+
+  GS-004:
+    code: GS-004
+    title: "Purchase Order & Vendor Intake"
+    description: "Confirm Purchase Order for raw materials and process incoming vendor receipt."
+    modules:
+      - purchase
+      - stock
+    capabilities:
+      - purchasing
+      - inventory
+    steps:
+      - "Confirm RFQ with preferred supplier for RM-001 and RM-002."
+      - "Generate vendor receipt (incoming shipment)."
+      - "Validate initial goods arrival at input dock."
+
+  GS-005:
+    code: GS-005
+    title: "Incoming Quality Gate"
+    description: "Execute incoming quality inspection for raw materials, recording Pass/Fail and Lot assignment."
+    modules:
+      - quality_control_oca
+      - quality_control_stock_oca
+    capabilities:
+      - manufacturing_quality
+    steps:
+      - "Trigger quality inspection order on vendor receipt."
+      - "Record inspection measurements (dimensions, surface finish)."
+      - "Mark inspection as PASS and transfer to Raw Material storage location."
+
+  GS-006:
+    code: GS-006
+    title: "Inventory Movements & Lot Traceability"
+    description: "Track inventory internal movements and assign Lot numbers for end-to-end traceability."
+    modules:
+      - stock
+    capabilities:
+      - inventory
+    steps:
+      - "Allocate Lot number RM-LOT-2026-001 to received RM-001."
+      - "Verify stock valuation and on-hand quantities across locations."
+
+  GS-007:
+    code: GS-007
+    title: "Manufacturing Order Demand & Material Reservation"
+    description: "Create MO for FG-001, reserve raw material stock, and stage materials at work centers."
+    modules:
+      - mrp
+      - stock
+    capabilities:
+      - manufacturing
+    steps:
+      - "Generate Manufacturing Order for 10 units of FG-001."
+      - "Check availability and reserve raw materials (RM-001, RM-002)."
+      - "Confirm material staging at production location."
+
+  GS-008:
+    code: GS-008
+    title: "Work Order Dispatch & Tracking"
+    description: "Execute Work Orders across WC-CUTTING, WC-WELDING, and WC-ASSEMBLY."
+    modules:
+      - mrp
+    capabilities:
+      - manufacturing
+    steps:
+      - "Start Work Order 10 at WC-CUTTING (record operator time)."
+      - "Complete Work Order 10 and dispatch to WC-WELDING."
+      - "Complete Work Order 20 and dispatch to WC-ASSEMBLY."
+
+  GS-009:
+    code: GS-009
+    title: "Scrap & Rework Recording"
+    description: "Record material scrap with reason codes and route rework through secondary inspection."
+    modules:
+      - scrap_reason_code
+      - mrp_workcenter_scrap_reason
+    capabilities:
+      - scrap_management
+    steps:
+      - "Record 2 units scrapped at WC-CUTTING with reason 'Dimension Defect'."
+      - "Verify scrap location balance and cost attribution to work center."
+      - "Route 1 rework piece back to WC-CUTTING."
+
+  GS-010:
+    code: GS-010
+    title: "Finished Goods Quality Gate"
+    description: "Final quality inspection before transferring finished product into FG warehouse."
+    modules:
+      - quality_control_oca
+      - quality_control_mrp_oca
+    capabilities:
+      - manufacturing_quality
+    steps:
+      - "Trigger final quality check on completed MO."
+      - "Inspect final assembly against specifications (PASS)."
+      - "Validate MO completion and transfer FG-001 to Finished Goods warehouse."
+
+  GS-011:
+    code: GS-011
+    title: "Delivery Order Processing"
+    description: "Pick, pack, and validate customer delivery from finished goods stock."
+    modules:
+      - stock
+      - sale_stock
+    capabilities:
+      - inventory
+      - sales
+    steps:
+      - "Reserve finished goods on Sales Delivery order."
+      - "Validate picking and outbound shipping."
+      - "Verify inventory deduction and customer shipment tracking."
+
+  GS-012:
+    code: GS-012
+    title: "Customer Invoicing & Accounting Reconciliation"
+    description: "Generate customer invoice, post journal entries, and reconcile payment."
+    modules:
+      - account
+      - sale_management
+    capabilities:
+      - accounting
+      - sales
+    steps:
+      - "Create customer invoice from validated Sales Order."
+      - "Post invoice to ledger (COGS, Revenue, Taxes)."
+      - "Register customer payment and reconcile account move."
+
+  GS-013:
+    code: GS-013
+    title: "Customer Return & Triage"
+    description: "Process customer return (RMA) through inspection to Restock, Rework, or Scrap."
+    modules:
+      - stock
+      - sale
+    capabilities:
+      - inventory
+    steps:
+      - "Create return picking for 1 unit of FG-001."
+      - "Receive return at inspection location."
+      - "Triage decision: Restock into FG inventory."
+
+  GS-014:
+    code: GS-014
+    title: "Automated Reordering & Replenishment"
+    description: "Verify automated reordering rule triggers procurement when stock drops below min threshold."
+    modules:
+      - stock
+      - purchase
+    capabilities:
+      - inventory
+      - purchasing
+    steps:
+      - "Check raw material inventory level against reordering rule min/max."
+      - "Run procurement scheduler."
+      - "Verify automatic RFQ creation for replenishing depleted stock."
+
+cross_cutting:
+  GX-001:
+    code: GX-001
+    title: "Role-Based Access Control & Approvals"
+    description: "Enforce security permissions, approval tiers, and record access across factory roles."
+    modules:
+      - factory_base
+    assertions:
+      - "Salesperson cannot approve Manufacturing Orders."
+      - "Production operator cannot view accounting journal entries."
+      - "PO above threshold requires Manager approval."
+
+  GX-002:
+    code: GX-002
+    title: "Factory QWeb Reports Generation"
+    description: "Verify error-free rendering of PDF reports (MO Traveler Card, Pick List, Commercial Invoice)."
+    modules:
+      - factory_base
+    assertions:
+      - "Manufacturing Order traveler card renders valid PDF."
+      - "Picking slip includes lot numbers and locations."
+      - "Customer invoice includes tax breakdown and QR/barcode."
+
+  GX-003:
+    code: GX-003
+    title: "Background Job Runner & Queue"
+    description: "Verify asynchronous queue job dispatch and execution."
+    modules:
+      - queue_job
+    assertions:
+      - "Queue job successfully dispatches to worker."
+      - "Job transitions from 'pending' to 'done' without exception."
+
+  GX-004:
+    code: GX-004
+    title: "Audit Logging & Operational Traceability"
+    description: "Verify audit trails and tracking for critical changes to BOM, costing, and inventory."
+    modules:
+      - factory_base
+    assertions:
+      - "BOM changes record user, timestamp, and delta."
+      - "Stock adjustments require reasoning and audit entry."

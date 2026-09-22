@@ -1,0 +1,260 @@
+capabilities:
+  sales:
+    status: approved
+    classification: CORE
+    description: "Quotation, sales orders, customer delivery demand"
+    requires: []
+    modules:
+      required:
+        - sale_management
+      optional:
+        - sale_stock
+    conflicts: []
+    profiles:
+      - core
+      - operations
+      - advanced
+      - full
+    tests:
+      - GS-002
+    documentation:
+      - docs/functional/sales.md
+
+  purchasing:
+    status: approved
+    classification: CORE
+    description: "Vendor management, RFQ, PO, procurement intake"
+    requires: []
+    modules:
+      required:
+        - purchase
+      optional:
+        - purchase_stock
+    conflicts: []
+    profiles:
+      - core
+      - operations
+      - advanced
+      - full
+    tests:
+      - GS-004
+    documentation:
+      - docs/functional/purchase.md
+
+  inventory:
+    status: approved
+    classification: CORE
+    description: "Warehousing, stock moves, lots, serial numbers, traceability"
+    requires: []
+    modules:
+      required:
+        - stock
+      optional:
+        - stock_account
+    conflicts: []
+    profiles:
+      - core
+      - operations
+      - advanced
+      - full
+    tests:
+      - GS-003
+      - GS-006
+      - GS-011
+      - GS-014
+    documentation:
+      - docs/functional/inventory.md
+
+  manufacturing:
+    status: approved
+    classification: CORE
+    description: "Manufacturing orders, BOM, routing, work centers, costing"
+    requires:
+      - inventory
+    modules:
+      required:
+        - mrp
+      optional:
+        - mrp_workorder_sequence
+    conflicts: []
+    profiles:
+      - core
+      - operations
+      - advanced
+      - full
+    tests:
+      - GS-001
+      - GS-007
+      - GS-008
+    documentation:
+      - docs/functional/manufacturing.md
+
+  accounting:
+    status: approved
+    classification: CORE
+    description: "Invoicing, accounts receivable/payable, COGM, COGS, journal entries"
+    requires: []
+    modules:
+      required:
+        - account
+      optional:
+        - account_payment
+    conflicts: []
+    profiles:
+      - core
+      - operations
+      - advanced
+      - full
+    tests:
+      - GS-012
+    documentation:
+      - docs/functional/accounting.md
+
+  security_baseline:
+    status: approved
+    classification: CORE
+    description: "Factory role-based access control, approval hierarchies, record rules"
+    requires: []
+    modules:
+      required:
+        - factory_base
+      optional: []
+    conflicts: []
+    profiles:
+      - core
+      - operations
+      - advanced
+      - full
+    tests:
+      - GX-001
+    documentation:
+      - docs/architecture/security.md
+
+  manufacturing_quality:
+    status: approved
+    classification: OPERATIONS
+    description: "Incoming, in-process, and finished goods quality inspection gates"
+    requires:
+      - manufacturing
+      - inventory
+    modules:
+      required:
+        - quality_control_oca
+        - quality_control_mrp_oca
+      optional:
+        - quality_control_stock_oca
+    conflicts: []
+    profiles:
+      - operations
+      - advanced
+      - full
+    tests:
+      - GS-005
+      - GS-010
+    documentation:
+      - docs/functional/quality.md
+
+  scrap_management:
+    status: approved
+    classification: OPERATIONS
+    description: "Structured scrap reasoning, work center scrap attribution, rework tracking"
+    requires:
+      - manufacturing
+      - inventory
+    modules:
+      required:
+        - scrap_reason_code
+        - mrp_workcenter_scrap_reason
+      optional: []
+    conflicts: []
+    profiles:
+      - operations
+      - advanced
+      - full
+    tests:
+      - GS-009
+    documentation:
+      - docs/functional/scrap.md
+
+  background_jobs:
+    status: approved
+    classification: INFRASTRUCTURE
+    description: "Asynchronous job runner queue for large imports, mass sync, heavy reports"
+    requires: []
+    modules:
+      required:
+        - queue_job
+        - queue_job_cron
+      optional:
+        - queue_job_batch
+    conflicts: []
+    profiles:
+      - operations
+      - advanced
+      - full
+    tests:
+      - GX-003
+    documentation:
+      - docs/operations/queue.md
+
+  ddmrp:
+    status: approved
+    classification: ADVANCED
+    description: "Demand Driven Material Requirements Planning buffers and decoupled replenishment"
+    requires:
+      - manufacturing
+      - inventory
+    modules:
+      required:
+        - ddmrp
+      optional:
+        - ddmrp_history
+    conflicts: []
+    profiles:
+      - advanced
+      - full
+    tests:
+      - GS-014
+    documentation:
+      - docs/functional/ddmrp.md
+
+  advanced_bom:
+    status: approved
+    classification: ADVANCED
+    description: "Multi-level BOM hierarchy, BOM versions, tracking, and notes"
+    requires:
+      - manufacturing
+    modules:
+      required:
+        - mrp_bom_hierarchy
+        - mrp_bom_version
+      optional:
+        - mrp_bom_tracking
+    conflicts: []
+    profiles:
+      - advanced
+      - full
+    tests:
+      - GS-001
+    documentation:
+      - docs/functional/bom.md
+
+  advanced_replenishment:
+    status: approved
+    classification: ADVANCED
+    description: "Advanced orderpoints, procurement exceptions, and dynamic rules"
+    requires:
+      - inventory
+      - purchasing
+    modules:
+      required:
+        - stock_orderpoint_manual_procurement
+      optional: []
+    conflicts: []
+    profiles:
+      - advanced
+      - full
+    tests:
+      - GS-014
+    documentation:
+      - docs/functional/replenishment.md
