@@ -25,6 +25,14 @@ rules:
     - "session_db"
 
 module_overrides:
+  factory_base:
+    classification: CORE
+    reason: "Project foundational module (settings, menus, security groups)"
+    status: approved
+  mrp_workorder_sequence:
+    classification: CORE
+    reason: "Standard work order sequencing"
+    status: approved
   queue_job:
     classification: INFRASTRUCTURE
     reason: "Core asynchronous job runner engine"
@@ -32,6 +40,10 @@ module_overrides:
   queue_job_cron:
     classification: INFRASTRUCTURE
     reason: "Cron triggers for background queue jobs"
+    status: approved
+  queue_job_batch:
+    classification: INFRASTRUCTURE
+    reason: "Batch processing extension for queue jobs"
     status: approved
   quality_control_oca:
     classification: OPERATIONS
@@ -56,6 +68,26 @@ module_overrides:
   ddmrp:
     classification: ADVANCED
     reason: "Demand Driven Material Requirements Planning engine"
+    status: approved
+  ddmrp_history:
+    classification: ADVANCED
+    reason: "Historical buffers tracking for DDMRP"
+    status: approved
+  mrp_bom_hierarchy:
+    classification: ADVANCED
+    reason: "Multi-level BOM visual hierarchy explorer"
+    status: approved
+  mrp_bom_version:
+    classification: ADVANCED
+    reason: "BOM revision and version control"
+    status: approved
+  mrp_bom_tracking:
+    classification: ADVANCED
+    reason: "Audit tracking for changes to BOM components"
+    status: approved
+  stock_orderpoint_manual_procurement:
+    classification: ADVANCED
+    reason: "Manual procurement trigger on automated orderpoints"
     status: approved
   clothing_factory_demo:
     classification: LEGACY
